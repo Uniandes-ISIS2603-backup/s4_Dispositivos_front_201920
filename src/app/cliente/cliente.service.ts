@@ -3,9 +3,10 @@ import { HttpClient } from "@angular/common/http";
 import { Cliente } from "./cliente";
 import { ClienteDetail } from "./cliente-detail";
 import { Observable } from "rxjs";
+import { environment } from '../../environments/environment';
 
-const API_URL = "../../assets/";
-const clientes = "clientes.json";
+const API_URL = environment.apiURL;
+const clientes = "/clientes";
 
 @Injectable()
 export class ClienteService {
