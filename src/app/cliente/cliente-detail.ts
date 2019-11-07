@@ -6,4 +6,5 @@ export class ClienteDetail extends Cliente{
      * Atributo que modela las facturas.
      */
   facturas: Factura[];
+  
 }

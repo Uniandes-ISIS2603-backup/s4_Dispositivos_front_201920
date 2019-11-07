@@ -1,14 +1,16 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {RouterModule, Routes} from '@angular/router';
-import {NgxPermissionsGuard} from 'ngx-permissions';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule, Routes } from '@angular/router';
+import { NgxPermissionsGuard } from 'ngx-permissions';
 
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
+import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
+import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 
 const routes: Routes = [
 
-     {
+    {
         path: 'auth',
         children: [
             {
@@ -35,18 +37,33 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: AuthLoginComponent
+        component: AuthLoginComponent,
+        children: [
+           
+        ]
     },
+
     {
-        path: '**',
-        redirectTo: 'home',
+        path: 'clientes',
+        children: [
+            {
+                path: "list",
+                component: ClienteListComponent,
+            },
+            {
+                path: ":id",
+                component: ClienteDetailComponent,
+                outlet: "detail"
+            }
+        ]
     }
+
 ];
 
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forRoot(routes, {onSameUrlNavigation: 'reload'})
+        RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload' })
     ],
     exports: [RouterModule],
     declarations: []

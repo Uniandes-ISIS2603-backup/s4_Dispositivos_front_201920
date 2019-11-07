@@ -1,8 +1,8 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Params } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { ClienteDetail } from '../cliente-detail';
-
+import {Cliente} from '../cliente';
 @Component({
     selector: 'app-cliente-detail',
     templateUrl: './cliente-detail.component.html',
@@ -10,48 +10,51 @@ import { ClienteDetail } from '../cliente-detail';
 })
 export class ClienteDetailComponent implements OnInit {
 
-    /**
-    * The cliente
-    */
-    @Input() clienteDetail: ClienteDetail;
+
+    
     /**
     * Constructor for the component
     * @param route The route which helps to retrieves the id of the factura to be shown
     * @param clienteService The cliente's services provider
     * @param toastrService The toastr to show messages to the user
     */
-    constructor(
-        private route: ActivatedRoute,
-        private clienteService: ClienteService 
-    ) { }
+   constructor(
+    private route: ActivatedRoute,
+    private clienteService: ClienteService 
+) { }    
 
-    
-    
+    /**
+    * The cliente
+    */
+    @Input() clienteDetail: ClienteDetail;
 
+    loader:any;
+    
     /**
     * El id del cliente que viene en el path get .../clientes/cliente_id
     */
-    cliente_id: number;
-    /**
-    * The method which obtains the cliente whose details we want to show
-    */
-    getClienteDetail(): void {
-        this.clienteService.getClienteDetail(this.cliente_id)
-            .subscribe(clienteDetail => {
-                this.clienteDetail = clienteDetail
-            });
-    }
+   cliente_id: number;
 
-   
-    /**
-    * The method which initializes the component.
-    * We need to create the cliente so it is never considered as undefined
-    */
-    ngOnInit() {
-        this.cliente_id = +this.route.snapshot.paramMap.get('id');
-        if (this.cliente_id){
-        this.clienteDetail = new ClienteDetail();
-        this.getClienteDetail();
-        }
-    }
+ 
+   getClienteDetail(): void {
+    this.clienteService.getClienteDetail(this.cliente_id).subscribe(o => {
+      this.clienteDetail = o;
+    });
+  }
+
+  onLoad(params) {
+    this.cliente_id = parseInt(params["id"]);
+    this.clienteDetail = new ClienteDetail();
+    this.getClienteDetail();
+  }
+
+  ngOnInit() {
+    this.loader = this.route.params.subscribe((params: Params) =>
+      this.onLoad(params)
+    );
+  }
+
+  ngOnDestroy() {
+    this.loader.unsubscribe();
+  }
 }

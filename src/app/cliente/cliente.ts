@@ -1,4 +1,7 @@
 export class Cliente {
+
+   id:number;
+   
    /**
   * Atributo que modela el nombre del cliente.
   */
