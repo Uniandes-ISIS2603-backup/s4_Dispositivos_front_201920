@@ -3,35 +3,22 @@
   <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
-<div class="container">
-  <div class="row">
-    <div class="card" style="width: 15rem;" *ngFor="let factura of clienteDetail.facturas">
-      <img src="https://svgsilh.com/svg/23874.svg" width="50" height="50" class="card-img-top">
-      <div class="card-body">
-        <ul>
-          <li>Numero de factura: {{factura.numeroDeFactura}} </li>
-          <li>Total pago: {{factura.totalPago}</li>
-            <li>Impuestos: } {{factura.impuestos}} </li>
-          <li>Fecha de pago: {{factura.fechaDePago}}</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-numeroDeFactura: number;
-
-/**
-* Atributo que modela el total del pago de la factura.
-*/
-
-totalPago: number;
-
-/**
-* Atributo que modela el porcentaje de impuestos de la factura.
-*/
-impuestos: number;
-
-/**
-* Fecha de pago de los dispositivos electronicos.
-*/
-fechaDePago: string;
+<h1>Facturas del cliente {{cliente.nombre}}</h1>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">Numero de factura:</th>
+      <th scope="col">Total pago</th>
+      <th scope="col">Impuestos</th>
+      <th scope="col">Fecha de pago</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let factura of clienteDetail.facturas">
+      <td>{{factura.numeroDeFactura}}</td>
+      <td>{{factura.totalPago}}</td>
+      <td>{{factura.impuestos}}</td>
+      <td>{{factura.fechaDePago}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -38,11 +38,8 @@ const routes: Routes = [
     {
         path: 'home',
         component: AuthLoginComponent,
-        children: [
-           
-        ]
+        children: []
     },
-
     {
         path: 'clientes',
         children: [

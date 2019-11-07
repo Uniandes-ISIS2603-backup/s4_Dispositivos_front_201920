@@ -9,7 +9,6 @@ import {NgxPermissionsModule} from 'ngx-permissions';
 import { ClienteService } from './cliente.service';
 import { ClienteListComponent } from './cliente-list/cliente-list.component';
 import { ClienteDetailComponent } from './cliente-detail/cliente-detail.component';
-import { ClienteCreateComponent } from './cliente-create/cliente-create.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import {FacturaModule} from '../factura/factura.module';
 
@@ -24,7 +23,7 @@ import {FacturaModule} from '../factura/factura.module';
     FacturaModule,
     NgbModule
   ],
-  declarations: [ClienteListComponent, ClienteDetailComponent,ClienteCreateComponent],
+  declarations: [ClienteListComponent, ClienteDetailComponent],
   exports: [ClienteListComponent],
   providers: [ClienteService]
 })
