@@ -10,7 +10,7 @@ import { HomeComponent } from '../home/home.component';
 const routes: Routes = [
 
      {
-        path: 'auth',
+        path: 'user',
         children: [
             {
                 path: 'login',
@@ -23,7 +23,7 @@ const routes: Routes = [
                 }
             },
             {
-                path: ':sign-up',
+                path: 'sign-up',
                 component: AuthSignUpComponent,
                 canActivate: [NgxPermissionsGuard],
                 data: {
