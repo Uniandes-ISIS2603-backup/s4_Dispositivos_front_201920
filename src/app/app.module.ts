@@ -14,6 +14,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import { HomeComponent } from './home/home.component';
+import { VendedoresModule } from './vendedores/vendedores.module';
 import { RouterModule } from '@angular/router';
 
 
@@ -33,6 +34,7 @@ import { RouterModule } from '@angular/router';
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         AuthModule,
+        VendedoresModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
