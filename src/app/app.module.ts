@@ -14,10 +14,7 @@ import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 
-
-
-
-
+import {CategoriaModule} from './categoria/categoria.module';
 
 @NgModule({
     declarations: [
@@ -38,7 +35,8 @@ import {AuthModule} from './auth/auth.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule, 
+        CategoriaModule
     ],
     bootstrap: [AppComponent],
     providers: [
