@@ -5,10 +5,10 @@
         <br>
         <h2 class="text-center">Crear una Categoria</h2>
         <br>
-        <form name="editorial" (ngSubmit)="f.form.valid && createCategoria()" #f="ngForm" novalidate>
+        <form name="categoria" (ngSubmit)="f.form.valid && createCategoria()" #f="ngForm" novalidate>
             <div class="form-group">
                 <label for="categoriaName"><b>Nombre</b></label>
-                <input type="text" name="categoriaName" class="form-control" id="categoriaName" [(ngModel)]="categoria.name"
+                <input type="text" name="categoriaName" class="form-control" id="categoriaName" [(ngModel)]="categoria.nombre"
                     #editorialName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && categoriaName.invalid }" required>
                 <div class="invalid-feedback">
                     <div>The categoria's name is missing</div>

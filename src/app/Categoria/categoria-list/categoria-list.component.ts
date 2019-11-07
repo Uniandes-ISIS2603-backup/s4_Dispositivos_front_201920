@@ -36,7 +36,7 @@ export class CategoriaListComponent implements OnInit {
     * The method which initializes the component
     */
    ngOnInit() {
-
+this.getCategorias();
 
    }
        
