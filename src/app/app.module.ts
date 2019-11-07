@@ -13,11 +13,8 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-
-
-
-
-
+import {ClienteModule} from './cliente/cliente.module';
+import {FacturaModule} from './factura/factura.module';
 
 @NgModule({
     declarations: [
@@ -29,6 +26,8 @@ import {AuthModule} from './auth/auth.module';
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
+        ClienteModule,
+        FacturaModule,
         AuthModule,
         FormsModule,
         ToastrModule.forRoot({
