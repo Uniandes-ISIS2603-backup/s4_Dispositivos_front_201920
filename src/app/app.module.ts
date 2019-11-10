@@ -15,6 +15,8 @@ import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
 import {ClienteModule} from './cliente/cliente.module';
 import {FacturaModule} from './factura/factura.module';
+import {MarcaModule} from './marca/marca.module';
+
 
 @NgModule({
     declarations: [
@@ -29,6 +31,7 @@ import {FacturaModule} from './factura/factura.module';
         ClienteModule,
         FacturaModule,
         AuthModule,
+        MarcaModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
