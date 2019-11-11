@@ -11,6 +11,7 @@ import { ClienteListComponent } from './cliente-list/cliente-list.component';
 import { ClienteDetailComponent } from './cliente-detail/cliente-detail.component';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import {FacturaModule} from '../factura/factura.module';
+import {ComprobanteModule} from '../comprobante/comprobante.module';
 
 @NgModule({
   imports: [
@@ -21,6 +22,7 @@ import {FacturaModule} from '../factura/factura.module';
     NgxPermissionsModule,
     FormsModule,
     FacturaModule,
+    ComprobanteModule,
     NgbModule
   ],
   declarations: [ClienteListComponent, ClienteDetailComponent],

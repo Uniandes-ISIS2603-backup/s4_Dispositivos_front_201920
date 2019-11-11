@@ -1,7 +1,6 @@
 import { Comprobante } from './comprobante';
-import { ComporbanteDetail } from './comprobante-detail/comprobante-detail';
 /**
-* This class represents a ComprobanteDetail of the Comrpobante. 
+* This class represents a ComprobanteDetail of the Comprobante. 
 * It contains all the information relevant to the book.
 */
 export class ComprobanteDetail extends Comprobante {
