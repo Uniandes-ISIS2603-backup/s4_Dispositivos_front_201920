@@ -44,7 +44,6 @@ import {CarouselModule} from 'primeng/carousel';
         NgxPermissionsModule.forRoot(),
         NgbModule, 
         DispositivoModule, 
-        CarouselModule
     ],
     bootstrap: [AppComponent],
     providers: [

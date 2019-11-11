@@ -7,6 +7,7 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { DispositivoDetailComponent } from '../dispositivo/dispositivo-detail/dispositivo-detail.component';
 import { HomeComponent } from '../dispositivo/home/home.component';
+import { DispositivoListComponent } from '../dispositivo/dispositivo-list/dispositivo-list.component';
 
 const routes: Routes = [
 
@@ -14,7 +15,11 @@ const routes: Routes = [
         path: 'dispositivos',
         children: [
             {
-                path: 'id',
+                path: "all",
+                component: DispositivoListComponent
+            },
+            {
+                path: ':id',
                 component: DispositivoDetailComponent
             },
         ]

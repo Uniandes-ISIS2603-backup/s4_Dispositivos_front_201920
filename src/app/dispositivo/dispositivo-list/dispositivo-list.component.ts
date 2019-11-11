@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { DispositivoService } from '../dispositivo.service';
+import { Dispositivo } from '../dispositivo';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-dispositivo-list',
@@ -7,9 +10,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DispositivoListComponent implements OnInit {
 
-  constructor() { }
+  constructor(private dispositivoService: DispositivoService, private route: ActivatedRoute) { }
+
+  @Input()
+  dispositivos: Dispositivo[];
+
+  getDispositivos(): void {
+    this.dispositivoService.getDispositivos().subscribe(dispositivos => {
+      this.dispositivos = dispositivos;
+    });
+  }
+
+  
 
   ngOnInit() {
+    this.getDispositivos();
   }
 
 }

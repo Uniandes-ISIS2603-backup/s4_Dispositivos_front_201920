@@ -2,6 +2,11 @@
     background-color: rgba(211, 211, 211, 0.4) !important;
 }
 
+.footer{
+    background-color: black !important;
+    color: white;
+}
+
 .fuente::placeholder {
     font-size: 10px;
 }
@@ -57,4 +62,9 @@
 
 #sign-in {
     margin-right: 100px;
+}
+
+.work{
+    font-family: Palatino, Georgia, 'Times New Roman', Times, serif;
+    font-size: 200px;
 }

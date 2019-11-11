@@ -7,6 +7,7 @@ import { DispositivoEditComponent } from './dispositivo-edit/dispositivo-edit.co
 import { DispositivoAddReviewComponent } from './dispositivo-add-review/dispositivo-add-review.component';
 import { HomeComponent } from './home/home.component';
 import {CarouselModule} from 'primeng/carousel';
+import { DispositivoService } from './dispositivo.service';
 
 
 
@@ -18,5 +19,6 @@ import {CarouselModule} from 'primeng/carousel';
   declarations: [DispositivoListComponent, DispositivoDetailComponent, 
     DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent, HomeComponent], 
     exports: [DispositivoListComponent, DispositivoEditComponent],
+    providers: [DispositivoService]
 })
 export class DispositivoModule { }

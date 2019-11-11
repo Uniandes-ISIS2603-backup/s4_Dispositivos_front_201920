@@ -4,14 +4,27 @@ export class Dispositivo{
 
     nombre: String;
 
+    modelo: String;
+
+    precioImportacion: Number; 
+
+    promocion: Boolean; 
+
+    tipo: String;
+
+    usado: Boolean; 
+
+    descripcion: String; 
+
+    descuento: Number; 
+
+    enStock: Boolean; 
+
+    esImportado: Boolean; 
+
+    estado: String; 
+
     precio: Number; 
 
     imagen: String; 
-
-    constructor(id:Number, nombre:String, precio:Number, imagen:String){
-        this.id = id; 
-        this.nombre = nombre; 
-        this.precio = precio; 
-        this.imagen = imagen; 
-    }
 }
