@@ -1,13 +1,13 @@
-import {AuthModule} from './auth.module';
+import {UserModule} from './user.module';
 
-describe('AuthModule', () => {
-    let authModule: AuthModule;
+describe('UserModule', () => {
+    let userModule: UserModule;
 
     beforeEach(() => {
-        authModule = new AuthModule();
+        userModule = new UserModule();
     });
 
     it('should create an instance', () => {
-        expect(authModule).toBeTruthy();
+        expect(userModule).toBeTruthy();
     });
 });

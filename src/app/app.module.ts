@@ -12,7 +12,7 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AuthModule} from './user/user.module';
+import {UserModule} from './user/user.module';
 import {ClienteModule} from './cliente/cliente.module';
 import {FacturaModule} from './factura/factura.module';
 import {MarcaModule} from './marca/marca.module';
@@ -30,7 +30,7 @@ import {MarcaModule} from './marca/marca.module';
         ModalDialogModule.forRoot(),
         ClienteModule,
         FacturaModule,
-        AuthModule,
+        UserModule,
         MarcaModule,
         FormsModule,
         ToastrModule.forRoot({

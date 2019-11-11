@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { NgxPermissionsGuard } from 'ngx-permissions';
 
-import { AuthLoginComponent } from '../user/user-login/user-login.component';
-import { AuthSignUpComponent } from '../user/user-sign-up/user-sign-up.component';
+import { UserLoginComponent } from '../user/user-login/user-login.component';
+import { UserSignUpComponent } from '../user/user-sign-up/user-sign-up.component';
 import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
 import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 import { MarcaCreateComponent } from '../marca/marca-create/marca-create.component';
@@ -13,7 +13,7 @@ const routes: Routes =
 [
     {
         path: 'login',
-                component: AuthLoginComponent,
+                component: UserLoginComponent,
                 canActivate: [NgxPermissionsGuard],
                 data: {
                     permissions: {
@@ -24,7 +24,7 @@ const routes: Routes =
     },
     {
         path: 'sign-up',
-        component: AuthSignUpComponent,
+        component: UserSignUpComponent,
         canActivate: [NgxPermissionsGuard],
         data: {
             permissions: {
@@ -35,7 +35,7 @@ const routes: Routes =
     },
     {
         path: 'home',
-        component: AuthLoginComponent,
+        component: UserLoginComponent,
         children: []
     },
     {

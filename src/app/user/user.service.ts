@@ -3,11 +3,8 @@ import {Router} from '@angular/router';
 import {NgxRolesService, NgxPermissionsService} from 'ngx-permissions'
 import 'rxjs/add/operator/catch';
 
-/**
- * The service provider for everything related to authentication
- */
 @Injectable()
-export class AuthService {
+export class UserService {
 
     /**
      * Constructor of the service
@@ -27,9 +24,8 @@ export class AuthService {
         } else if (role === 'ADMIN') {
             this.setAdministratorRole();
         }else if (role === 'VEND') {
-            this.setAdministratorRole();
+            this.setVendedorRole();
         }
-        
         else {
             this.setClientRole();
         }
