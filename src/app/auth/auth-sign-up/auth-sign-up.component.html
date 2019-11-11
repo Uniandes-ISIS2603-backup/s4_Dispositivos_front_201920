@@ -19,7 +19,7 @@
                 </select>
             </div>
             <div class="justify-content-center align-self-center">
-                <button type="submit" class="btn btn-primary"> Sign Up</button>
+                <button type="submit" class="btn btn-primary" [routerLink] ="['/user/sign-up/', { outlets: { 'user': [user.id] } }]"> Sign Up</button>
             </div>
         </form>
     </div>

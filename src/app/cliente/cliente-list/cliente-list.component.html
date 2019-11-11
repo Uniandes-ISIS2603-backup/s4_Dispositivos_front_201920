@@ -1,0 +1,27 @@
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<div class="container">
+<div class="row">
+    <div class="card mb-3" style="max-width: 540px;"  *ngFor="let cliente of clientes">
+        <div class="row no-gutters">
+          <div class="col-md-4">
+            <img src="https://svgsilh.com/svg/23874.svg" width="100" height="150"  class="card-img" alt="...">
+          </div>
+          <div class="col-md-8">
+            <div class="card-body">
+                <h5 class="card-title">{{cliente.nombre}}   {{cliente.apellido}} </h5>
+                <ul>
+                    <li>Usuario: {{cliente.usuario}}</li>
+                    <li>Id: {{cliente.id}}</li>
+                  </ul>    
+                  <a class="btn btn-primary" [routerLink] ="['/clientes', { outlets: { 'detail':[cliente.id] } }]">Ver facturas</a>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
+
