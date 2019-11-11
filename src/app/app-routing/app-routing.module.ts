@@ -7,6 +7,8 @@ import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { CategoriaCreateComponent } from '../categoria/categoria-create/categoria-create.component';
 import { CategoriaListComponent } from '../categoria/categoria-list/categoria-list.component';
+import { MedioPagoListComponent } from '../medioPago/medio-list/medio-list.component';
+import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create.component';
 
 const routes: Routes = [
 
@@ -36,13 +38,23 @@ const routes: Routes = [
         ]
     },
     {
-        path: 'crear',
+        path: 'crearCategorias',
         component: CategoriaCreateComponent,
 
     },
     {
-        path: 'listar',
+        path: 'listarCategorias',
         component: CategoriaListComponent,
+
+    },
+    {
+        path: 'crearMedios',
+        component: MedioPagoCreateComponent,
+
+    },
+    {
+        path: 'listarMedios',
+        component: MedioPagoListComponent,
 
     },
     {

@@ -37,8 +37,8 @@ export class CategoriaService
     * @param categoria The new categoria
     * @returns The categoria with its new id if it was created, false if it wasn't
     */
-   createCategoria(categoria): Observable<CategoriaDetail> {
-    return this.http.post<CategoriaDetail>(API_URL + categorias, categoria);
+   createCategoria(categoria): Observable<Categoria> {
+    return this.http.post<Categoria>(API_URL + categorias, categoria);
     }
 
         /**

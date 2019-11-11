@@ -60,6 +60,13 @@ export class CategoriaCreateComponent implements OnInit
 }
 
     /**
+    * Emits the signal to tell the parent component that the
+    * user no longer wants to create an user
+    */
+   cancelCreation(): void {
+    this.cancel.emit();
+}
+    /**
     * This function will initialize the component
     */
    ngOnInit() {
