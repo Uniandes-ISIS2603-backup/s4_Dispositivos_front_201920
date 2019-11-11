@@ -1,23 +1,23 @@
 import { Component, OnInit, Input, OnChanges, Output, EventEmitter } from '@angular/core';
 import { ToastrService } from 'ngx-toastr';
 
-import { AuthService } from '../auth.service';
+import { UserService } from '../user.service';
 import { User } from '../user';
 
 @Component({
-    selector: 'app-auth-sign-up',
-    templateUrl: './auth-sign-up.component.html',
-    styleUrls: ['./auth-sign-up.component.css']
+    selector: 'app-user-sign-up',
+    templateUrl: './user-sign-up.component.html',
+    styleUrls: ['./user-sign-up.component.css']
 })
-export class AuthSignUpComponent implements OnInit {
+export class UserSignUpComponent implements OnInit {
 
     /**
     * Constructor for the component
-    * @param authService Auth service provider
+    * @param userService Auth service provider
     * @param toastrService The toastr to show messages to the user
     */
     constructor(
-        private authService: AuthService,
+        private userService: UserService,
         private toastrService: ToastrService,
     ) { }
 
@@ -29,7 +29,7 @@ export class AuthSignUpComponent implements OnInit {
     * Sign the user up with the selected role
     */
     signUp(): void {
-        this.authService.login(this.user.role);
+        this.userService.login(this.user.role);
         this.toastrService.success('Successfully signed up')
     }
 
@@ -38,7 +38,7 @@ export class AuthSignUpComponent implements OnInit {
     */
     ngOnInit() {
         this.user = new User();
-        this.roles = ['Cliente', 'Vendedor', 'Administrador'];
+        this.roles = ['Cliente', 'Vendedor'];
     }
 
 }

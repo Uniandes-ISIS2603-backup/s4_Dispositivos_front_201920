@@ -7,7 +7,7 @@ import 'rxjs/add/operator/catch';
  * The service provider for everything related to authentication
  */
 @Injectable()
-export class AuthService {
+export class UserService {
 
     /**
      * Constructor of the service
@@ -26,7 +26,10 @@ export class AuthService {
             this.setGuestRole();
         } else if (role === 'ADMIN') {
             this.setAdministratorRole();
-        } else {
+        } else if (role === 'VEND') {
+            this.setAdministratorRole();
+        }
+         else {
             this.setClientRole();
         }
     }
@@ -48,6 +51,12 @@ export class AuthService {
         localStorage.setItem('role', 'ADMIN');
     }
 
+    setVendedorRole (): void {
+        this.roleService.flushRoles();
+        this.roleService.addRole('VEND', ['edit_author_permission', 'delete_author_permission']);
+        localStorage.setItem('role', 'VEND');
+    }
+
     printRole (): void {
         console.log(this.roleService.getRoles());
     }
@@ -59,7 +68,10 @@ export class AuthService {
     login (role): void {
         if (role === 'Administrator') {
             this.setAdministratorRole();
-        } else {
+        } else if (role === 'Vendedor') {
+            this.setVendedorRole();
+        }
+         else {
             this.setClientRole()
         }
         this.router.navigateByUrl('/books/list');

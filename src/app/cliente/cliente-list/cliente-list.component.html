@@ -8,18 +8,17 @@
     <div class="card mb-3" style="max-width: 540px;"  *ngFor="let cliente of clientes">
         <div class="row no-gutters">
           <div class="col-md-4">
-            <img src="https://svgsilh.com/svg/23874.svg" width="100" height="150"  class="card-img" alt="...">
+            <img src="http://simpleicon.com/wp-content/uploads/user1.png" width="100" height="100"  class="card-img" alt="...">
           </div>
           <div class="col-md-8">
             <div class="card-body">
-                <h5 class="card-title">{{cliente.nombre}}   {{cliente.apellido}} </h5>
+                <h5 class="card-title">{{cliente.nombre}}  {{cliente.apellido}} </h5>
                 <ul>
                     <li>Usuario: {{cliente.usuario}}</li>
                     <li>Id: {{cliente.id}}</li>
                   </ul> 
-              <div class="btn-group" role="group" aria-label="Basic example">
-              <a class="btn btn-dark" [routerLink] ="['/clientes', { outlets: { 'detail':[cliente.id] } }]">Facturas</a>
-              <a class="btn btn-dark" [routerLink] ="['/clientes', { outlets: { 'detailComprobante':[cliente.id] } }]">Comprobantes</a>
+              <div class="btn-group" role="group">
+              <a class="btn btn-dark" [routerLink] ="['/clientes', { outlets: { 'detail':[cliente.id] } }]">Ver más</a>
               </div>
             </div>
           </div>

@@ -2,7 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { ClienteService } from '../cliente.service';
 import { ClienteDetail } from '../cliente-detail';
-import {Cliente} from '../cliente';
+
 @Component({
     selector: 'app-cliente-detail',
     templateUrl: './cliente-detail.component.html',
