@@ -4,11 +4,11 @@ import { ClienteService } from '../cliente.service';
 import { ClienteDetail } from '../cliente-detail';
 import {Cliente} from '../cliente';
 @Component({
-    selector: 'app-cliente-detail',
-    templateUrl: './cliente-detail.component.html',
-    styleUrls: ['./cliente-detail.component.css']
+    selector: 'app-cliente-comprobante-detail',
+    templateUrl: './cliente-comprobante-detail.component.html',
+    styleUrls: ['./cliente-comprobante-detail.component.css']
 })
-export class ClienteDetailComponent implements OnInit {
+export class ClienteComprobanteDetailComponent implements OnInit {
     /**
     * Constructor for the component
     * @param route The route which helps to retrieves the id of the factura to be shown
@@ -32,7 +32,6 @@ export class ClienteDetailComponent implements OnInit {
     */
    cliente_id: number;
 
- 
    getClienteDetail(): void {
     this.clienteService.getClienteDetail(this.cliente_id).subscribe(o => {
       this.clienteDetail = o;

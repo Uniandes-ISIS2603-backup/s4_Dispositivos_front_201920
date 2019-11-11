@@ -6,13 +6,14 @@ import { NgxPermissionsGuard } from 'ngx-permissions';
 import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
 import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
+import { ClienteComprobanteDetailComponent } from '../cliente/cliente-comprobante-detail/cliente-comprobante-detail.component';
 import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 import { MarcaCreateComponent } from '../marca/marca-create/marca-create.component';
 
 const routes: Routes = [
 
     {
-        path: 'auth',
+        path: 'user',
         children: [
             {
                 path: 'login',
@@ -25,7 +26,7 @@ const routes: Routes = [
                 }
             },
             {
-                path: ':sign-up',
+                path: 'signup',
                 component: AuthSignUpComponent,
                 canActivate: [NgxPermissionsGuard],
                 data: {

@@ -16,8 +16,11 @@
                 <ul>
                     <li>Usuario: {{cliente.usuario}}</li>
                     <li>Id: {{cliente.id}}</li>
-                  </ul>    
-                  <a class="btn btn-primary" [routerLink] ="['/clientes', { outlets: { 'detail':[cliente.id] } }]">Ver facturas</a>
+                  </ul> 
+              <div class="btn-group" role="group" aria-label="Basic example">
+              <a class="btn btn-dark" [routerLink] ="['/clientes', { outlets: { 'detail':[cliente.id] } }]">Facturas</a>
+              <a class="btn btn-dark" [routerLink] ="['/clientes', { outlets: { 'detailComprobante':[cliente.id] } }]">Comprobantes</a>
+              </div>
             </div>
           </div>
         </div>
