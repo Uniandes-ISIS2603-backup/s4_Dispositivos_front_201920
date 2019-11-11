@@ -13,8 +13,9 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import {AuthModule} from './auth/auth.module';
-import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
+import { DispositivoModule } from './dispositivo/dispositivo.module';
+import {CarouselModule} from 'primeng/carousel';
 
 
 
@@ -24,10 +25,10 @@ import { RouterModule } from '@angular/router';
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
@@ -41,7 +42,9 @@ import { RouterModule } from '@angular/router';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule, 
+        DispositivoModule, 
+        CarouselModule
     ],
     bootstrap: [AppComponent],
     providers: [

@@ -5,11 +5,18 @@ import { DispositivoDetailComponent } from './dispositivo-detail/dispositivo-det
 import { DispositivoCreateComponent } from './dispositivo-create/dispositivo-create.component';
 import { DispositivoEditComponent } from './dispositivo-edit/dispositivo-edit.component';
 import { DispositivoAddReviewComponent } from './dispositivo-add-review/dispositivo-add-review.component';
+import { HomeComponent } from './home/home.component';
+import {CarouselModule} from 'primeng/carousel';
+
+
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule, 
+    CarouselModule
   ],
-  declarations: [DispositivoListComponent, DispositivoDetailComponent, DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent]
+  declarations: [DispositivoListComponent, DispositivoDetailComponent, 
+    DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent, HomeComponent], 
+    exports: [DispositivoListComponent, DispositivoEditComponent],
 })
 export class DispositivoModule { }
