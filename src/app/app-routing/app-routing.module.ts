@@ -3,39 +3,42 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { NgxPermissionsGuard } from 'ngx-permissions';
 
-import { UserLoginComponent } from '../user/user-login/user-login.component';
-import { UserSignUpComponent } from '../user/user-sign-up/user-sign-up.component';
+import { AuthLoginComponent } from '../auth/auth-login/auth-login.component';
+import { AuthSignUpComponent } from '../auth/auth-sign-up/auth-sign-up.component';
 import { ClienteDetailComponent } from '../cliente/cliente-detail/cliente-detail.component';
 import { ClienteListComponent } from '../cliente/cliente-list/cliente-list.component';
 import { MarcaCreateComponent } from '../marca/marca-create/marca-create.component';
 
-const routes: Routes = 
-[
+const routes: Routes = [
+
     {
-        path: 'login',
-                component: UserLoginComponent,
+        path: 'auth',
+        children: [
+            {
+                path: 'login',
+                component: AuthLoginComponent,
                 canActivate: [NgxPermissionsGuard],
                 data: {
                     permissions: {
                         only: ['GUEST']
                     }
-        },
-        children: []
-    },
-    {
-        path: 'sign-up',
-        component: UserSignUpComponent,
-        canActivate: [NgxPermissionsGuard],
-        data: {
-            permissions: {
-                only: ['GUEST']
+                }
+            },
+            {
+                path: ':sign-up',
+                component: AuthSignUpComponent,
+                canActivate: [NgxPermissionsGuard],
+                data: {
+                    permissions: {
+                        only: ['GUEST']
+                    }
+                }
             }
-        },
-        children: []
+        ]
     },
     {
         path: 'home',
-        component: UserLoginComponent,
+        component: AuthLoginComponent,
         children: []
     },
     {

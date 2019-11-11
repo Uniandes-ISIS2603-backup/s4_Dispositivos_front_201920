@@ -1,5 +1,5 @@
 /**
-* This class represents a user of s4_dispositivos-Front.
+* This class represents a user of the BookStore.
 * It contains all the information relevant to the user.
 */
 export class User {

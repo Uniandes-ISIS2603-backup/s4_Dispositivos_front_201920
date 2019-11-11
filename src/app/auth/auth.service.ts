@@ -3,8 +3,11 @@ import {Router} from '@angular/router';
 import {NgxRolesService, NgxPermissionsService} from 'ngx-permissions'
 import 'rxjs/add/operator/catch';
 
+/**
+ * The service provider for everything related to authentication
+ */
 @Injectable()
-export class UserService {
+export class AuthService {
 
     /**
      * Constructor of the service
@@ -23,10 +26,7 @@ export class UserService {
             this.setGuestRole();
         } else if (role === 'ADMIN') {
             this.setAdministratorRole();
-        }else if (role === 'VEND') {
-            this.setVendedorRole();
-        }
-        else {
+        } else {
             this.setClientRole();
         }
     }
@@ -40,12 +40,6 @@ export class UserService {
         this.roleService.flushRoles();
         this.roleService.addRole('CLIENT', ['leave_review']);
         localStorage.setItem('role', 'CLIENT');
-    }
-
-    setVendedorRole (): void {
-        this.roleService.flushRoles();
-        this.roleService.addRole('VEND', ['leave_review']);
-        localStorage.setItem('role', 'VEND');
     }
 
     setAdministratorRole (): void {
@@ -65,13 +59,10 @@ export class UserService {
     login (role): void {
         if (role === 'Administrator') {
             this.setAdministratorRole();
-        } else if (role === 'Vendedor') {
-            this.setVendedorRole();
-        } 
-        else {
+        } else {
             this.setClientRole()
         }
-        this.router.navigateByUrl('/');
+        this.router.navigateByUrl('/books/list');
     }
 
     /**

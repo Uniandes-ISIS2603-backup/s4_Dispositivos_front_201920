@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UserService } from './user.service';
+import { AuthService } from './auth.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from '../app-routing/app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
+import { AuthLoginComponent } from './auth-login/auth-login.component';
+import { AuthSignUpComponent } from './auth-sign-up/auth-sign-up.component';
 
 @NgModule({
     imports: [
@@ -18,8 +18,8 @@ import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
         FormsModule,
         NgbModule
     ],
-    declarations: [UserLoginComponent, UserSignUpComponent],
-    providers: [UserService],
-    bootstrap: [UserLoginComponent]
+    declarations: [AuthLoginComponent, AuthSignUpComponent],
+    providers: [AuthService],
+    bootstrap: [AuthLoginComponent]
 })
-export class UserModule { }
+export class AuthModule { }
