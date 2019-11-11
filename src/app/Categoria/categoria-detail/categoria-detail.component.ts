@@ -15,6 +15,36 @@ import {CategoriaDetail} from '../categoria-detail';
 export class CategoriaDetailComponent implements OnInit, OnDestroy
 {
 
+        /**
+    * The component's constructor
+    * @param categriaService The categoria's service
+    * @param route The route element which helps to obtain the categoria's id
+    * @param toastrService The toastr to show messages to the user
+    */
+   constructor(
+    private categoriaService: CategoriaService,
+    private route: ActivatedRoute
+) { }
+
+    /**
+    * The categoria's whose details we want to show
+    */
+   categoriaDetail: CategoriaDetail;
+
+   /**
+   * The categoria's id retrieved from the address
+   */
+   categoria_id: number;
+
+       /**
+    * The method which retrieves the books of an editorial
+    */
+   getEditorialDetail(): void {
+    this.categoriaService.getCategoriaDetail(this.categoria_id)
+        .subscribe(categoriaDetail => {
+            this.categoriaDetail = categoriaDetail
+        });
+}
 
     /**
     * The method which initilizes the component

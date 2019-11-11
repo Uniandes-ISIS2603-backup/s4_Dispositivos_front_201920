@@ -47,13 +47,14 @@ export class CategoriaCreateComponent implements OnInit
     * Creates a new categoria
     */
    createCategoria(): Categoria {
+
+    console.log(this.categoria);
     this.categoriaService.createCategoria(this.categoria)
         .subscribe((categoria) => {
             this.categoria = categoria;
             this.create.emit();
             this.toastrService.success("The categoria was created", "Categoria creation");
-        }, err => {
-            this.toastrService.error(err, "Error");
+
         });
     return this.categoria;
 }

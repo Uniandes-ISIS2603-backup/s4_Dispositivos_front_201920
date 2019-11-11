@@ -45,7 +45,7 @@ export class CategoriaService
     * Returns the Observable object with the details of an categoria retrieved from the API
     * @returns The categoria details
     */
-   getCategoriasDetail(categoriaId): Observable<CategoriaDetail> {
-    return this.http.get<CategoriaDetail>(API_URL + categorias + '/' + categoriaId);
+   getCategoriaDetail(categoria_id): Observable<CategoriaDetail> {
+    return this.http.get<CategoriaDetail>(API_URL + categorias + '/' + categoria_id);
 }
 }
