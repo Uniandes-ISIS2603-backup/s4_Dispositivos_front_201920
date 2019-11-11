@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { AuthService } from './auth/auth.service';
+import { AuthService } from './user/user.service';
 
 /**
  * The app component. This component is the base of s4_dispositivos-Front

@@ -12,25 +12,15 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AuthModule} from './auth/auth.module';
-<<<<<<< HEAD
-import { HomeComponent } from './home/home.component';
-import { RouterModule } from '@angular/router';
-
-
-
-
-=======
+import {AuthModule} from './user/user.module';
 import {ClienteModule} from './cliente/cliente.module';
 import {FacturaModule} from './factura/factura.module';
 import {MarcaModule} from './marca/marca.module';
->>>>>>> origin/Carlos
 
 
 @NgModule({
     declarations: [
-        AppComponent,
-        HomeComponent
+        AppComponent
     ],
     imports: [
         BrowserModule,
