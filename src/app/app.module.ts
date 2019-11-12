@@ -12,14 +12,12 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AuthModule} from './auth/auth.module';
-import { RouterModule } from '@angular/router';
 import { DispositivoModule } from './dispositivo/dispositivo.module';
-import {CarouselModule} from 'primeng/carousel';
-
-
-
-
+import { RouterModule } from '@angular/router';
+import {MarcaModule} from './marca/marca.module';
+import {FacturaModule} from './factura/factura.module';
+import {ClienteModule} from './cliente/cliente.module';
+import {UserModule} from './user/user.module';
 
 
 @NgModule({
@@ -33,7 +31,10 @@ import {CarouselModule} from 'primeng/carousel';
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
-        AuthModule,
+        ClienteModule,
+        FacturaModule,
+        UserModule,
+        MarcaModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
