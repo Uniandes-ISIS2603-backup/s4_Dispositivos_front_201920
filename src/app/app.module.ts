@@ -12,18 +12,21 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {UserModule} from './user/user.module';
-import {ClienteModule} from './cliente/cliente.module';
-import {FacturaModule} from './factura/factura.module';
+import { DispositivoModule } from './dispositivo/dispositivo.module';
+import { RouterModule } from '@angular/router';
 import {MarcaModule} from './marca/marca.module';
+import {FacturaModule} from './factura/factura.module';
+import {ClienteModule} from './cliente/cliente.module';
+import {UserModule} from './user/user.module';
 
 
 @NgModule({
     declarations: [
-        AppComponent
+        AppComponent,
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
@@ -40,7 +43,8 @@ import {MarcaModule} from './marca/marca.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule, 
+        DispositivoModule, 
     ],
     bootstrap: [AppComponent],
     providers: [

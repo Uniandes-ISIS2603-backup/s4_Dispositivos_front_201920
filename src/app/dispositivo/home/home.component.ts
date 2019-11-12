@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Dispositivo } from '../dispositivo';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +9,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  
+  responsiveOptions;
 
-  constructor() { }
+  constructor() {
+
+
+  }
 
   ngOnInit() {
   }
