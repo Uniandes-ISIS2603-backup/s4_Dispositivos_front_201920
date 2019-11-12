@@ -51,7 +51,7 @@
   <div class="card mb-3 display mx-auto my-4" style="max-width: 840px;" *ngFor="let d of dispositivos">
     <div class="row no-gutters">
       <div class="col-md-4">
-        <a href="dispositivos/{{d.id}}"><img src="{{d.imagen}}" class="card-img" alt="..."> </a>
+        <a href="dispositivos/{{d.id}}"><img src={{d.imagen}} class="card-img" alt="..."> </a>
       </div>
       <div class="col-md-8">
         <div class="card-body">

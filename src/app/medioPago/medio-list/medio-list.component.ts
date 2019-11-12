@@ -4,7 +4,7 @@ import {ActivatedRoute} from '@angular/router';
 import {MedioPago} from '../../medioPago/medio';
 import {MedioPagoService} from '../../medioPago/medio.service';
 @Component({
-    selector: 'app-´medio-list',
+    selector: 'app-medio-list',
     templateUrl: './medio-list.component.html',
     styleUrls: ['./medio-list.component.css']
 })
