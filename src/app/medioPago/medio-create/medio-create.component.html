@@ -1,0 +1,48 @@
+  
+<div class="row">
+    <div class="col-3"></div>
+    <div class="col-6">
+        
+        <h2 class="text-center">Crear un Medio de Pago</h2>
+
+        <form name="numeroTarjeta" (ngSubmit)="f.form.valid && createMedioPago()" #f="ngForm" novalidate>
+            <div class="form-group">
+                <label for="numeroTarjeta"><b>Numero de Tarjeta</b></label>
+                <input type="text" name="numeroTarjeta" class="form-control" id="numeroTarjeta" [(ngModel)]="medio.numeroTarjeta"
+                    #numeroTarjeta="ngModel" [ngClass]="{ 'is-invalid': f.submitted && numeroTarjeta.invalid}" required>
+                <div class="invalid-feedback">
+                    <div>The medio's numero de tarjeta is missing</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="numeroDeVerificacion"><b>Numero de Verificacion</b></label>
+                <input type="text" name="numeroDeVerificacion" class="form-control" id="numeroDeVerificacion" [(ngModel)]="medio.numeroDeVerificacion"
+                    #numeroDeVerificacion="ngModel" [ngClass]="{ 'is-invalid': f.submitted && numeroDeVerificacion.invalid}" required>
+                <div class="invalid-feedback">
+                    <div>The medio's numero de Verificacion is missing</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tipoTarjeta"><b>Tipo de Tarjeta</b></label>
+                <input type="text" name="tipoTarjeta" class="form-control" id="tipoTarjeta" [(ngModel)]="medio.tipoTarjeta"
+                    #tipoTarjeta="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tipoTarjeta.invalid}" required>
+                <div class="invalid-feedback">
+                    <div>The medio's tipo de tarjeta is missing</div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="tipoCredito"><b>Tipo de Credito</b></label>
+                <input type="text" name="tipoCredito" class="form-control" id="tipoCredito" [(ngModel)]="medio.tipoCredito"
+                    #tipoCredito="ngModel" [ngClass]="{ 'is-invalid': f.submitted && tipoCredito.invalid}" required>
+                <div class="invalid-feedback">
+                    <div>The medio's tipo de credito is missing</div>
+                </div>
+            </div>
+            <div class="row form-inline justify-content-center align-self-center">
+                <button type="submit" class="btn btn-primary">Create</button>
+                <div class="divider"></div>
+                <button type="button" class="btn btn-danger" (click)="cancelCreation()">Cancel</button>
+            </div>
+        </form>
+    </div>
+    <div class="col-3"></div>

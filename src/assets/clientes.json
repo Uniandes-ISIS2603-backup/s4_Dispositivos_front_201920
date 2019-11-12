@@ -1,0 +1,20 @@
+[{
+    "nombre": "Hanan",
+    "apellido": "Tedridge",
+    "correoElectronico": "htedridge0@reddit.com",
+    "cedula": 1000000001,
+    "direccion": "63 Fairview Terrace",
+    "usuario": "htedridge0",
+    "contrasena": "OD1RdhpYnh9",
+    "metodoDePago_ID": "0"
+  },
+  {
+    "nombre": "Petrina",
+    "apellido": "Caustic",   
+    "correoElectronico": "pcaustic1@aboutads.info",
+    "cedula": 1000000002,
+    "direccion": "54 Pleasure Center",
+    "usuario": "pcaustic1",
+    "contrasena": "25UqtKTdg"
+  }
+]

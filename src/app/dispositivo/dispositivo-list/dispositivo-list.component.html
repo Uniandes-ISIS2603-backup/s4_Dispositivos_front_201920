@@ -1,0 +1,66 @@
+<div class="bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+      aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <a class="navbar-brand" href="/home">WireLess</a>
+
+    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+        <li class="nav-item active">
+          <a class="nav-link" href="/dispositivos/all">Dispositivos <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Categorias <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Marcas <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Promociones <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="#">Importados <span class="sr-only">(current)</span></a>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+        <form class="form-inline my-2 my-lg-0" id="busqueda">
+          <input class="form-control mr-sm-2 busqueda" type="search" placeholder="Buscar productos, marcas y más"
+            aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </ul>
+
+      <ul class="navbar-nav md-auto mt-2 mt-lg-0">
+        <li>
+          <a class="nav-link" id="sign-in" href="#">Hello, Sign In <span class="sr-only">(current)</span></a>
+        </li>
+        <li>
+          <a href="#">
+            <img class="shopping" src="https://cdn4.iconfinder.com/data/icons/shopping-21/64/shopping-01-512.png">
+          </a>
+        </li>
+      </ul>
+
+    </div>
+  </nav>
+
+  <div class="card mb-3 display mx-auto my-4" style="max-width: 840px;" *ngFor="let d of dispositivos">
+    <div class="row no-gutters">
+      <div class="col-md-4">
+        <a href="dispositivos/{{d.id}}"><img src={{d.imagen}} class="card-img" alt="..."> </a>
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{d.nombre}}</h5>
+          <p class="card-text">{{d.descripcion}}</p>
+          <a  class="btn btn-primary">Agregar a carrito</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
