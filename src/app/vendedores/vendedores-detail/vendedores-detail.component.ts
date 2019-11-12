@@ -17,9 +17,9 @@ export class VendedoresDetailComponent implements OnInit {
     private route: ActivatedRoute) 
     { }
 
-  vendedorDetail: VendedorDetail; 
+  @Input() vendedorDetail: VendedorDetail; 
 
-  @Input() vendedor_cedula: number;
+  vendedor_cedula: number;
 
   loader: any;
 
@@ -30,7 +30,6 @@ export class VendedoresDetailComponent implements OnInit {
   onLoad(params)
   {
     this.vendedor_cedula = parseInt(params['id']);
-    console.log(" en detail " + this.vendedor_cedula);
     this.vendedorDetail = new VendedorDetail();
     this.getVendedorDetail();
   }
