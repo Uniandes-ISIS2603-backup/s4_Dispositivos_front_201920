@@ -82,7 +82,7 @@ const routes: Routes = [
     },
     {
         path: 'home',
-        component: UserLoginComponent,
+        component: HomeComponent,
         children: []
     },
     {
