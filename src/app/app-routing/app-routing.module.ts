@@ -11,6 +11,10 @@ import { MarcaCreateComponent } from '../marca/marca-create/marca-create.compone
 import { DispositivoListComponent } from '../dispositivo/dispositivo-list/dispositivo-list.component';
 import { HomeComponent } from '../dispositivo/home/home.component';
 import { DispositivoDetailComponent } from '../dispositivo/dispositivo-detail/dispositivo-detail.component';
+import { CategoriaCreateComponent } from '../categoria/categoria-create/categoria-create.component';
+import { CategoriaListComponent } from '../categoria/categoria-list/categoria-list.component';
+import { MedioPagoListComponent } from '../medioPago/medio-list/medio-list.component';
+import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create.component';
 
 const routes: Routes = [
 
@@ -51,8 +55,28 @@ const routes: Routes = [
                         only: ['GUEST']
                     }
                 }
-            }
+            },
         ]
+    },
+    {
+        path: 'crearCategorias',
+        component: CategoriaCreateComponent,
+
+    },
+    {
+        path: 'listarCategorias',
+        component: CategoriaListComponent,
+
+    },
+    {
+        path: 'crearMedios',
+        component: MedioPagoCreateComponent,
+
+    },
+    {
+        path: 'listarMedios',
+        component: MedioPagoListComponent,
+
     },
     {
         path: 'home',

@@ -19,6 +19,8 @@ import {FacturaModule} from './factura/factura.module';
 import {ClienteModule} from './cliente/cliente.module';
 import {UserModule} from './user/user.module';
 
+import {CategoriaModule} from './categoria/categoria.module';
+import {MedioPagoModule} from './medioPago/medio.module';
 
 @NgModule({
     declarations: [
@@ -45,6 +47,8 @@ import {UserModule} from './user/user.module';
         NgxPermissionsModule.forRoot(),
         NgbModule, 
         DispositivoModule, 
+        CategoriaModule,
+        MedioPagoModule
     ],
     bootstrap: [AppComponent],
     providers: [
