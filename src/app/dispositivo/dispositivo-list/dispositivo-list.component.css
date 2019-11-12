@@ -1,0 +1,61 @@
+.bg-primary{
+    background-color: rgba(211, 211, 211, 0.4) !important;
+}
+
+.fuente::placeholder {
+    font-size: 10px;
+}
+
+.carousel-control-next {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 100px;
+}
+
+.carousel-control-prev {
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 50px;
+    height: 100px;
+}
+
+
+.container{
+    width: 2000px;
+}
+
+.shopping {
+    width: 40px;
+    height: 40px;
+    margin-right: 50px;
+}
+
+.busqueda {
+    width: 700px;
+}
+
+.btn-img {
+    margin-top: 100px;
+}
+
+.img-banner {
+    width: 1920px !important;
+    height: 408px !important;
+}
+
+.disp {
+    width: 400px;
+    width: 400px;
+}
+
+.nuevos{
+    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+    font-size: 26px;
+    font-weight: 300;
+    margin: 0,0,0,8px;
+    color: #666
+}
+
+#sign-in {
+    margin-right: 100px;
+}
+
