@@ -12,29 +12,29 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AuthModule} from './auth/auth.module';
-import { HomeComponent } from './home/home.component';
-import { VendedoresModule } from './vendedores/vendedores.module';
+import { DispositivoModule } from './dispositivo/dispositivo.module';
 import { RouterModule } from '@angular/router';
-
-
-
-
+import {MarcaModule} from './marca/marca.module';
+import {FacturaModule} from './factura/factura.module';
+import {ClienteModule} from './cliente/cliente.module';
+import {UserModule} from './user/user.module';
 
 
 @NgModule({
     declarations: [
         AppComponent,
-        HomeComponent
     ],
     imports: [
         BrowserModule,
+        BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
-        AuthModule,
-        VendedoresModule,
+        ClienteModule,
+        FacturaModule,
+        UserModule,
+        MarcaModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
@@ -43,7 +43,8 @@ import { RouterModule } from '@angular/router';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule
+        NgbModule, 
+        DispositivoModule, 
     ],
     bootstrap: [AppComponent],
     providers: [

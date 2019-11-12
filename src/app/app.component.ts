@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import { AuthService } from './auth/auth.service';
+import { UserService } from './user/user.service';
 
 /**
  * The app component. This component is the base of s4_dispositivos-Front
@@ -21,16 +21,16 @@ export class AppComponent implements OnInit {
      */
     ngOnInit(): void {
         this.title = "WireLess";
-        this.authService.start();
+        this.userService.start();
     }
 
        /**
      * @ignore
      */
-    constructor(private authService: AuthService) { }
+    constructor(private userService: UserService) { }
 
     logout(): void {
-        this.authService.logout()
+        this.userService.logout()
     }
 
 }
