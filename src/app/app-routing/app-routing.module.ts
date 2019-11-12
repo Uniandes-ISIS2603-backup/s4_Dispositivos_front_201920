@@ -15,6 +15,8 @@ import { CategoriaCreateComponent } from '../categoria/categoria-create/categori
 import { CategoriaListComponent } from '../categoria/categoria-list/categoria-list.component';
 import { MedioPagoListComponent } from '../medioPago/medio-list/medio-list.component';
 import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create.component';
+import { VendedoresListComponent } from '../vendedores/vendedores-list/vendedores-list.component';
+import { VendedoresDetailComponent } from '../vendedores/vendedores-detail/vendedores-detail.component';
 
 const routes: Routes = [
 
@@ -105,7 +107,23 @@ const routes: Routes = [
                 component: MarcaCreateComponent,
             }
         ]
-    }
+    },
+    
+    {
+        path: 'vendedores',
+        children:
+        [
+          {
+            path: 'list',
+            component: VendedoresListComponent
+          },
+          {
+            path: ':id',
+            component: VendedoresDetailComponent,
+            outlet: 'detail'
+          }
+        ]
+      }
 ];
 
 @NgModule({

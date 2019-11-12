@@ -13,6 +13,7 @@ import { ModalDialogModule } from 'ngx-modal-dialog';
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
 import { DispositivoModule } from './dispositivo/dispositivo.module';
+import { VendedoresModule } from './vendedores/vendedores.module';
 import { RouterModule } from '@angular/router';
 import {MarcaModule} from './marca/marca.module';
 import {FacturaModule} from './factura/factura.module';
@@ -37,6 +38,7 @@ import {MedioPagoModule} from './medioPago/medio.module';
         FacturaModule,
         UserModule,
         MarcaModule,
+        VendedoresModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
