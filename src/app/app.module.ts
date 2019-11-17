@@ -9,18 +9,20 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import {OwlModule} from 'ngx-owl-carousel'; 
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
-import {AuthModule} from './auth/auth.module';
-import { RouterModule } from '@angular/router';
 import { DispositivoModule } from './dispositivo/dispositivo.module';
-import {CarouselModule} from 'primeng/carousel';
+import { VendedoresModule } from './vendedores/vendedores.module';
+import { RouterModule } from '@angular/router';
+import {MarcaModule} from './marca/marca.module';
+import {FacturaModule} from './factura/factura.module';
+import {ClienteModule} from './cliente/cliente.module';
+import {UserModule} from './user/user.module';
 
-
-
-
-
+import {CategoriaModule} from './categoria/categoria.module';
+import {MedioPagoModule} from './medioPago/medio.module';
 
 @NgModule({
     declarations: [
@@ -33,7 +35,11 @@ import {CarouselModule} from 'primeng/carousel';
         HttpClientModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
-        AuthModule,
+        ClienteModule,
+        FacturaModule,
+        UserModule,
+        MarcaModule,
+        VendedoresModule,
         FormsModule,
         ToastrModule.forRoot({
             timeOut: 10000,
@@ -44,6 +50,9 @@ import {CarouselModule} from 'primeng/carousel';
         NgxPermissionsModule.forRoot(),
         NgbModule, 
         DispositivoModule, 
+        CategoriaModule,
+        MedioPagoModule, 
+        OwlModule
     ],
     bootstrap: [AppComponent],
     providers: [
