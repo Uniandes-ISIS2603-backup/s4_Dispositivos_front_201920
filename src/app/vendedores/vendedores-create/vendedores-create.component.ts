@@ -1,5 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {Router} from '@angular/router';
+import {ToastrService} from 'ngx-toastr';
 import { VendedoresService } from '../vendedores.service';
 import { Vendedor } from '../vendedor';
 

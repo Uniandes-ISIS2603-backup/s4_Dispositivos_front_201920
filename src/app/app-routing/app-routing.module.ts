@@ -17,6 +17,7 @@ import { MedioPagoListComponent } from '../medioPago/medio-list/medio-list.compo
 import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create.component';
 import { VendedoresListComponent } from '../vendedores/vendedores-list/vendedores-list.component';
 import { VendedoresDetailComponent } from '../vendedores/vendedores-detail/vendedores-detail.component';
+import { VendedoresCreateComponent } from '../vendedores/vendedores-create/vendedores-create.component';
 
 const routes: Routes = [
 
@@ -113,6 +114,10 @@ const routes: Routes = [
         path: 'vendedores',
         children:
         [
+          {
+            path: 'create',
+            component: VendedoresCreateComponent
+          }, 
           {
             path: 'list',
             component: VendedoresListComponent
