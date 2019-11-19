@@ -22,72 +22,78 @@
       </ul>
 
       <style>
-
         .dropbtn {
-            background-color: white;
-            color: black;
-            padding: 16px;
-            font-size: 16px;
-            border: none;
+          background-color: white;
+          color: black;
+          padding: 16px;
+          font-size: 16px;
+          border: none;
         }
-        
+
         .dropdown {
-            position: relative;
-            display: inline-block;
+          position: relative;
+          display: inline-block;
         }
-        
+
         .dropdown-content {
-            display: none;
-            position: absolute;
-            background-color: lightgrey;
-            min-width: 200px;
-            z-index: 1;
+          display: none;
+          position: absolute;
+          background-color: lightgrey;
+          min-width: 200px;
+          z-index: 1;
         }
-        
+
         .dropdown-content a {
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
+          color: black;
+          padding: 12px 16px;
+          text-decoration: none;
+          display: block;
         }
-        
-        .dropdown-content a:hover {background-color: white;}
-        .dropdown:hover .dropdown-content {display: block;}
-        .dropdown:hover .dropbtn {background-color: grey;}
-        
-        </style>
+
+        .dropdown-content a:hover {
+          background-color: white;
+        }
+
+        .dropdown:hover .dropdown-content {
+          display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+          background-color: grey;
+        }
+      </style>
 
       <div class="dropdown">
         <button class="dropbtn">Categorias</button>
         <div class="dropdown-content">
-        
-        <a href="crearCategorias">crear</a>
-        <a href="listarCategorias">listar</a>
-  
-        
-        </div>
-        </div>
 
-        
+          <a href="crearCategorias">crear</a>
+          <a href="listarCategorias">listar</a>
+
+
+        </div>
+      </div>
+
+
       <div class="dropdown">
         <button class="dropbtn">Cliente</button>
         <div class="dropdown-content">
-        
-        <a href="clientes/list">listar</a>  
-        </div>
-        </div>
 
-        
+          <a href="clientes/list">listar</a>
+        </div>
+      </div>
+
+
       <div class="dropdown">
         <button class="dropbtn">medios</button>
         <div class="dropdown-content">
-        
-        <a href="crearMedios">crear</a>
-        <a href="listarMedios">listar</a>
-  
-        
+
+          <a href="crearMedios">crear</a>
+          <a href="listarMedios">listar</a>
+
+
         </div>
-        </div>
+      </div>
 
 
 
@@ -148,7 +154,38 @@
     </a>
   </div>
 
-  <p class="text-center work">Pronto un home que te mereces</p>
+  <!--<p class="text-center work">Pronto un home que te mereces</p>-->
+
+
+  <!--Ejemplo implementacion Owl Carousel-->
+
+  <!--owl-carousel [options]="SlideOptions" [items]="images" [carouselClasses]="['owl-theme', 'sliding']">
+
+    <div class="item" *ngFor="let img of Images">
+      <div style="align-content: center">
+        <img style="height: 260px;width:100%" src={{img}} />
+      </div>
+
+    </div>
+
+
+  </owl-carousel-->
+  <!--Fin ejemplo -->
+
+  <div class="container">
+    <owl-carousel [options]="SlideOptions" [items]="sellers" [carouselClasses]="['owl-theme', 'sliding']">
+      <div class="item" *ngFor="let disp of sellers">
+        <div style="align-content: center">
+          <img style="height: 260px;width:100%" src={{disp.imagen}} />
+        </div>
+
+      </div>
+    </owl-carousel>
+  </div>
+
+
+
+
 
   <div class="bg-primary footer">
 

@@ -8,13 +8,16 @@ import { DispositivoAddReviewComponent } from './dispositivo-add-review/disposit
 import { HomeComponent } from './home/home.component';
 import {CarouselModule} from 'primeng/carousel';
 import { DispositivoService } from './dispositivo.service';
+import {OwlModule} from 'ngx-owl-carousel'; 
+
 
 
 
 @NgModule({
   imports: [
     CommonModule, 
-    CarouselModule
+    CarouselModule, 
+    OwlModule
   ],
   declarations: [DispositivoListComponent, DispositivoDetailComponent, 
     DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent, HomeComponent], 
