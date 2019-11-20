@@ -9,6 +9,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {HttpErrorInterceptor} from './interceptors/httperrorinterceptor.service';
 import {NgxPermissionsModule} from 'ngx-permissions';
 import { ModalDialogModule } from 'ngx-modal-dialog';
+import {OwlModule} from 'ngx-owl-carousel'; 
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing/app-routing.module';
@@ -50,7 +51,8 @@ import {MedioPagoModule} from './medioPago/medio.module';
         NgbModule, 
         DispositivoModule, 
         CategoriaModule,
-        MedioPagoModule
+        MedioPagoModule, 
+        OwlModule
     ],
     bootstrap: [AppComponent],
     providers: [
