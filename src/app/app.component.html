@@ -1,4 +1,106 @@
+<div class="bg-primary">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/home">Wireless</a>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/dispositivos/all">Dispositivos <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Promociones <span class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a class="nav-link" href="/vendedores/list">Vendedores <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item active mt-1">
+                        <div class="btn-group">
+                            <button class="btn btn-drop btn-secondary btn-sm dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Categorias
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/crearCategorias">Crear</a>
+                                <a class="dropdown-item" href="/listarCategorias">Listar</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active mt-1">
+                        <div class="btn-group">
+                            <button class="btn btn-drop btn-secondary btn-sm dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Cliente
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/clientes/list">Listar</a>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="nav-item active mt-1">
+                        <div class="btn-group">
+                            <button class="btn btn-drop btn-secondary btn-sm dropdown-toggle" type="button"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Medios
+                            </button>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="/crearMedios">Agregar Medio Pago</a>
+                                <a class="dropdown-item" href="/listarMedios">Medios De Pagos</a>
+                            </div>
+                        </div>
+                    </li>
+
+                </ul>
+
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <form class="form-inline my-2 my-lg-0" id="busqueda">
+                        <input class="form-control mr-sm-2 busqueda" type="search"
+                            placeholder="Buscar productos, marcas y más" aria-label="Search">
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    </form>
+                </ul>
+
+                <ul class="navbar-nav md-auto mt-2 mt-lg-0">
+                    <li>
+                        <a class="nav-link" id="sign-in" href="/user/signup">Hello, Sign In <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img class="shopping"
+                                src="https://cdn4.iconfinder.com/data/icons/shopping-21/64/shopping-01-512.png">
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+    </div>
+    
 <router-outlet></router-outlet>
-<router-outlet></router-outlet>
-<router-outlet name="detail"></router-outlet>
-<router-outlet name="registro"></router-outlet>
+    
+    <div class="bg-primary footer">
+
+            <!-- Footer -->
+            <footer class="page-footer font-small blue">
+    
+                <!-- Copyright -->
+                <div class="footer-copyright text-center py-3">
+                    © 2019 Copyright: WireLess
+                </div>
+                <!-- Copyright -->
+    
+            </footer>
+            <!-- Footer -->
+    
+        </div>

@@ -21,7 +21,7 @@ import {OwlModule} from 'ngx-owl-carousel';
   ],
   declarations: [DispositivoListComponent, DispositivoDetailComponent, 
     DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent, HomeComponent], 
-    exports: [DispositivoListComponent, DispositivoEditComponent],
+    exports: [DispositivoListComponent, DispositivoEditComponent,CarouselModule,HomeComponent],
     providers: [DispositivoService]
 })
 export class DispositivoModule { }
