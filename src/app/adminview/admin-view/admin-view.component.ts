@@ -29,6 +29,7 @@ export class AdminViewComponent implements OnInit
         private router: Router,
         private categoria: Categoria,
         private dispositivo:Dispositivo,
+        private categoriaService:CategoriaService,
         private marca:Marca,
         private route:ActivatedRoute
     ) {}
@@ -51,7 +52,7 @@ export class AdminViewComponent implements OnInit
     */
    createCategoria(): Categoria {
 
-    this.adminService.createCategoria(this.categoria)
+    this.categoriaService.createCategoria(this.categoria)
         .subscribe((categoria) => {
             this.categoria = categoria;
             this.create.emit();

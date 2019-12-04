@@ -43,8 +43,6 @@ export class UserSignUpComponent implements OnInit {
             this.user2 = user2;
             this.create.emit();
             this.toastrService.success("The vendedor was created", "vendedor creation");
-        }, err => {
-            this.toastrService.error(err, "Error");
         });
 
 
@@ -61,6 +59,7 @@ export class UserSignUpComponent implements OnInit {
     * This function will initialize the component
     */
     ngOnInit() {
+        this.user2=new Vendedor();
         this.user = new Cliente();
     }
 
