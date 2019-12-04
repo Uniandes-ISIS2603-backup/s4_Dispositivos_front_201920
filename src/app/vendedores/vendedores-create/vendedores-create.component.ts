@@ -28,7 +28,7 @@ export class VendedoresCreateComponent implements OnInit {
   createVendedor(newVendedor: Vendedor) {
     // Process checkout data here
     console.warn("Sie sind wie ein Verkäufer registriert", newVendedor);
-
+    this.vendedorService.createVendedor(newVendedor);
    this.vendedorForm.reset();
   }
 

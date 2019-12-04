@@ -4,4 +4,5 @@ export class Marca {
      */
     nombreMarca: string;
     id:number;
+    logo:string;
 }

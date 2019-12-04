@@ -5,43 +5,37 @@
         <br>
         <form name="sign-up" (ngSubmit)="f.form.valid && signUp()" #f="ngForm" novalidate>
             <div class="form-group">
-                <label for="username"><b>Usuario</b></label>
-                <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                <label for="usuario"><b>Usuario</b></label>
+                <input type="text" name="usuario" class="form-control" id="usuario" [(ngModel)]="user.usuario"  [(ngModel)]="user2.usuario" required>
             </div>
             <div class="form-group">
-                <label for="password"><b>Contraseña</b></label>
-                <input type="text" name="password" class="form-control" id="password" [(ngModel)]="user.password" required>
-            </div>
-            <div class="form-group">
-                <label for="role"><b>Rol en el sistema</b></label>
-                <select class="custom-select" name="role" id="role" [(ngModel)]="user.role" required>
-                    <option [value]="role" *ngFor="let role of roles">{{role}}</option>
-                </select>
+                <label for="contrasena"><b>Contraseña</b></label>
+                <input type="text" name="contrasena" class="form-control" id="contrasena" [(ngModel)]="user.contrasena" [(ngModel)]="user2.contrasena" required>
             </div>
             <div>
                 <div class="form-group">
-                    <label for="correo"><b>Correo electrónico</b></label>
-                    <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                    <label for="correoElectronico"><b>Correo electrónico</b></label>
+                    <input type="text" name="correoElectronico" class="form-control" id="correoElectronico" [(ngModel)]="user.correoElectronico" [(ngModel)]="user2.correoElectronico" required>
                 </div>
                 <div class="form-group">
                     <label for="nombre"><b>Nombre(s)</b></label>
-                    <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                    <input type="text" name="nombre" class="form-control" id="nombre" [(ngModel)]="user.nombre" [(ngModel)]="user2.nombre" required>
                 </div>
                 <div class="form-group">
                     <label for="apellidos"><b>Apellidos</b></label>
-                    <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                    <input type="text" name="apellido" class="form-control" id="apellido" [(ngModel)]="user.apellido" [(ngModel)]="user2.apellido" required>
                 </div>
                 <div class="form-group">
                     <label for="cedula"><b>Cédula</b></label>
-                    <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
-                </div>
-                <div class="form-group">
-                        <label for="celuar"><b>Celular</b></label>
-                        <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                    <input type="text" name="cedula" class="form-control" id="cedula" [(ngModel)]="user.cedula" [(ngModel)]="user2.cedula" required>
                 </div>
                 <div class="form-group">
                         <label for="direccion"><b>Dirección</b></label>
-                        <input type="text" name="username" class="form-control" id="username" [(ngModel)]="user.name" required>
+                        <input type="text" name="direccion" class="form-control" id="direccion" [(ngModel)]="user.direccion" required>
+                </div>
+                <div class="form-group">
+                        <label for="celular"><b>Celular</b></label>
+                        <input type="text" name="celular" class="form-control" id="celular" [(ngModel)]="user2.celular" required>
                 </div>
             </div>
             <div class="justify-content-center align-self-center">

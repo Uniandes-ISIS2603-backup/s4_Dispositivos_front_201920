@@ -19,7 +19,7 @@ export class VendedoresDetailComponent implements OnInit {
 
   @Input() vendedorDetail: VendedorDetail; 
 
-  vendedor_cedula: number;
+  vendedor_cedula: string;
 
   loader: any;
 
@@ -29,7 +29,7 @@ export class VendedoresDetailComponent implements OnInit {
 
   onLoad(params)
   {
-    this.vendedor_cedula = parseInt(params['id']);
+    this.vendedor_cedula = params['id'];
     this.vendedorDetail = new VendedorDetail();
     this.getVendedorDetail();
   }

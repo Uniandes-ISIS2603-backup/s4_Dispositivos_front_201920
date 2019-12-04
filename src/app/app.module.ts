@@ -23,6 +23,7 @@ import {UserModule} from './user/user.module';
 
 import {CategoriaModule} from './categoria/categoria.module';
 import {MedioPagoModule} from './medioPago/medio.module';
+import { AdminModule } from './adminview/admin.module';
 
 @NgModule({
     declarations: [
@@ -52,6 +53,7 @@ import {MedioPagoModule} from './medioPago/medio.module';
         DispositivoModule, 
         CategoriaModule,
         MedioPagoModule, 
+        AdminModule,
         OwlModule
     ],
     bootstrap: [AppComponent],

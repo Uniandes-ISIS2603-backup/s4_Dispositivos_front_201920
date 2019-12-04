@@ -20,6 +20,7 @@ import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
     ],
     declarations: [UserLoginComponent, UserSignUpComponent],
     providers: [UserService],
-    bootstrap: [UserLoginComponent]
+    bootstrap: [UserLoginComponent,UserSignUpComponent],
+    exports:[UserLoginComponent,UserSignUpComponent]
 })
 export class UserModule { }
