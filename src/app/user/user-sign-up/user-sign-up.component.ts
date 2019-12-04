@@ -36,19 +36,12 @@ export class UserSignUpComponent implements OnInit {
         this.userService.signUp(this.user).subscribe((user) => {
             this.user = user;
             this.create.emit();
-
-
-
             this.vendedorService.createVendedor(this.user2).subscribe((user2) => {
             this.user2 = user2;
             this.create.emit();
             this.toastrService.success("The vendedor was created", "vendedor creation");
         });
-
-
-
-
-            this.toastrService.success("The cliente was created", "cliente creation");
+          this.toastrService.success("The cliente was created", "cliente creation");
         }, err => {
             this.toastrService.error(err, "Error");
         });

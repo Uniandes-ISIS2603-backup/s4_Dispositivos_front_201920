@@ -21,6 +21,7 @@
       </div>
     </div>
   </div>
+
   <div class="col-sm-6">
     <div class="card">
       <div class="card-body">
@@ -35,7 +36,7 @@
             </div>
             <label for="marcaLogo"><b>Ingrese la url del logo de la marca</b></label>
             <input type="text" name="marcaLogo" class="form-control" id="marcaLogo" [(ngModel)]="marca.logo"
-              #marcaName="ngModel" [ngClass]="{ 'is-invalid': f.submitted && marcaLogo.invalid }" required>
+              #marcaLogo="ngModel" [ngClass]="{ 'is-invalid': f.submitted && marcaLogo.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el logo de la marca</div>
             </div>
@@ -48,6 +49,7 @@
       </div>
     </div>
   </div>
+
   <div class="col-sm-6 offset-3">
     <div class="card">
       <div class="card-body">
@@ -56,22 +58,14 @@
           <div class="form-group">
             <label for="dispositivoName"><b>Nombre</b></label>
             <input type="text" name="dispositivoName" class="form-control" id="dispositivoName"
-              [(ngModel)]="dispositivo.nombre" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.nombre" #dispositivoName="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoName.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el nombre del dispositivo</div>
             </div>
             <label for="dispositivoModelo"><b>Ingrese el modelo del dispositivo</b></label>
             <input type="text" name="dispositivoModelo" class="form-control" id="dispositivoModelo"
-              [(ngModel)]="dispositivo.modelo" #marcaName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && dispositivoModelo.invalid }" required>
-            <div class="invalid-feedback">
-              <div>Hace falta el modelo del dispositivo</div>
-            </div>
-
-            <label for="dispositivoModelo"><b>Ingrese el modelo del dispositivo</b></label>
-            <input type="text" name="dispositivoModelo" class="form-control" id="dispositivoModelo"
-              [(ngModel)]="dispositivo.modelo" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.modelo" #dispositivoModelo="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoModelo.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el modelo del dispositivo</div>
@@ -79,7 +73,7 @@
 
             <label for="dispositivopImportacion"><b>Ingrese el precio de importación del dispositivo</b></label>
             <input type="text" name="dispositivopImportacion" class="form-control" id="dispositivopImportacion"
-              [(ngModel)]="dispositivo.precioImportacion" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.precioImportacion" #dispositivopImportacion="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivopImportacion.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el precio de importación del dispositivo</div>
@@ -87,7 +81,7 @@
 
             <label for="dispositivoTipo"><b>Ingrese el tipo del dispositivo</b></label>
             <input type="text" name="dispositivoTipo" class="form-control" id="dispositivoTipo"
-              [(ngModel)]="dispositivo.tipo" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.tipo" #dispositivoTipo="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoTipo.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el tipo del dispositivo</div>
@@ -95,7 +89,7 @@
 
             <label for="dispositivoDescripcion"><b>Ingrese la descripción del dispositivo</b></label>
             <input type="text" name="dispositivoDescripcion" class="form-control" id="dispositivoDescripcion"
-              [(ngModel)]="dispositivo.descripcion" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.descripcion" #dispositivoDescripcion="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoDescripcion.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta la descripción del dispositivo</div>
@@ -103,7 +97,7 @@
 
             <label for="dispositivoDescuento"><b>Ingrese el descuento del dispositivo</b></label>
             <input type="text" name="dispositivoDescuento" class="form-control" id="dispositivoDescuento"
-              [(ngModel)]="dispositivo.descuento" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.descuento" #dispositivoDescuento="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoDescuento.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el descuento del dispositivo</div>
@@ -111,7 +105,7 @@
 
             <label for="dispositivoEstado"><b>Ingrese el estado del dispositivo</b></label>
             <input type="text" name="dispositivoEstado" class="form-control" id="dispositivoEstado"
-              [(ngModel)]="dispositivo.estado" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.estado" #dispositivoEstado="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoEstado.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el estado del dispositivo</div>
@@ -119,7 +113,7 @@
 
             <label for="dispositivoPrecio"><b>Ingrese el precio del dispositivo</b></label>
             <input type="text" name="dispositivoPrecio" class="form-control" id="dispositivoPrecio"
-              [(ngModel)]="dispositivo.precio" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.precio" #dispositivoPrecio="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoPrecio.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta el precio del dispositivo</div>
@@ -127,7 +121,7 @@
 
             <label for="dispositivoImagenes"><b>Ingrese la imagen del dispositivo</b></label>
             <input type="text" name="dispositivoImagenes" class="form-control" id="dispositivoImagenes"
-              [(ngModel)]="dispositivo.imagenes" #marcaName="ngModel"
+              [(ngModel)]="dispositivo.imagenes" #dispositivoImagenes="ngModel"
               [ngClass]="{ 'is-invalid': f.submitted && dispositivoImagenes.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta la imagen del dispositivo</div>
@@ -135,23 +129,23 @@
 
             <label for="dispositivoPromocion"><b>Promocion</b></label>
             <input type="checkbox" name="dispositivoPromocion" class="form-control" id="dispositivoPromocion"
-              value=checked [(ngModel)]="dispositivo.promocion" #marcaName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && dispositivoPromocion.invalid }" required>
+              value=checked [(ngModel)]="dispositivo.promocion" #dispositivoPromocion="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && dispositivoPromocion.invalid }">
 
             <label for="dispositivoUsado"><b>Usado</b></label>
             <input type="checkbox" name="dispositivoUsado" class="form-control" id="dispositivoUsado" value=checked
-              [(ngModel)]="dispositivo.usado" #marcaName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && dispositivoUsado.invalid }" required>
+              [(ngModel)]="dispositivo.usado" #dispositivoUsado="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && dispositivoUsado.invalid }" >
 
             <label for="dispositivoStock"><b>En Stock</b></label>
             <input type="checkbox" name="dispositivoStock" class="form-control" id="dispositivoStock" value=checked
-              [(ngModel)]="dispositivo.enStock" #marcaName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && dispositivoStock.invalid }" required>
+              [(ngModel)]="dispositivo.enStock" #dispositivoStock="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && dispositivoStock.invalid }" >
 
-            <label for="dispositivoImportado"><b>En Stock</b></label>
+            <label for="dispositivoImportado"><b>Es importado</b></label>
             <input type="checkbox" name="dispositivoImportado" class="form-control" id="dispositivoImportado"
-              value=checked [(ngModel)]="dispositivo.esImportado" #marcaName="ngModel"
-              [ngClass]="{ 'is-invalid': f.submitted && dispositivoImportado.invalid }" required>
+              value=checked [(ngModel)]="dispositivo.esImportado" #dispositivoImportado="ngModel"
+              [ngClass]="{ 'is-invalid': f.submitted && dispositivoImportado.invalid }" >
 
             <div class="row form-inline justify-content-center align-self-center">
               <button type="submit" class="btn btn-primary">Crear</button>
@@ -159,8 +153,4 @@
             </div>
           </div>
         </form>
-
-
-
-
       </div>
