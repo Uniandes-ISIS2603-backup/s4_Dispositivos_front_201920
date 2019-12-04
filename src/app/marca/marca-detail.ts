@@ -6,6 +6,6 @@ import { Marca } from './marca';
 */
 export class MarcaDetail extends Marca {
    
-    logo: string[];
+    logo: string;
     dispositivos:string[];
 }

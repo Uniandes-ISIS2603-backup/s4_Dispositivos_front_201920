@@ -26,5 +26,5 @@ export class Dispositivo{
 
     precio: Number; 
 
-    imagen: String; 
+    imagenes: String[]; 
 }
