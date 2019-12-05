@@ -24,6 +24,7 @@ import {UserModule} from './user/user.module';
 import {CategoriaModule} from './categoria/categoria.module';
 import {MedioPagoModule} from './medioPago/medio.module';
 import { AdminModule } from './adminview/admin.module';
+import { NotFoundModule } from './notFound/notFound.module';
 
 @NgModule({
     declarations: [
@@ -54,7 +55,8 @@ import { AdminModule } from './adminview/admin.module';
         CategoriaModule,
         MedioPagoModule, 
         AdminModule,
-        OwlModule
+        OwlModule,
+        NotFoundModule
     ],
     bootstrap: [AppComponent],
     providers: [

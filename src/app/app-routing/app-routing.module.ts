@@ -18,6 +18,7 @@ import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create
 import { VendedoresListComponent } from '../vendedores/vendedores-list/vendedores-list.component';
 import { VendedoresDetailComponent } from '../vendedores/vendedores-detail/vendedores-detail.component';
 import { AdminViewComponent } from '../adminview/admin-view/admin-view.component';
+import { NotFoundComponent } from '../notFound/notFound/notfound.component';
 
 const routes: Routes = [
 
@@ -128,7 +129,9 @@ const routes: Routes = [
             outlet: 'detail'
           }
         ]
-      }
+      },
+      {path: '', redirectTo: 'home',pathMatch: 'full'},
+      { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({
