@@ -81,7 +81,10 @@
                     <a class="nav-link" id="sign-in" href="/user/signup" *ngxPermissionsOnly="['GUEST']">Hello, Sign In
                         <span class="sr-only">(current)</span></a>
                 </li>
-
+                <li>
+                        <a class="nav-link" id="sign-in" href="/administrador" *ngxPermissionsOnly="['ADMIN']">Agregar
+                            <span class="sr-only">(current)</span></a>
+                    </li>
                 <li>
                     <a class="nav-link" id="log-out" *ngxPermissionsOnly="['CLIENT','ADMIN','VEND']"
                         (click)="logout()" href="/home" >Log out<span class="sr-only">(current)</span></a>

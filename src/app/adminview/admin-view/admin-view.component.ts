@@ -34,6 +34,9 @@ export class AdminViewComponent implements OnInit
         private route:ActivatedRoute
     ) {}
 
+    tipos:String[];
+    estado:String[];
+
     /**
     * The output which tells the parent component
     * that the user created a new editorial
@@ -101,5 +104,7 @@ export class AdminViewComponent implements OnInit
     this.categoria = new Categoria();
     this.dispositivo=new Dispositivo();
     this.marca=new Marca();
+    this.tipos=['COMPUTADOR','TABLET','CELULAR'];
+    this.estado=['NUEVO','USADO'];
 }
 }

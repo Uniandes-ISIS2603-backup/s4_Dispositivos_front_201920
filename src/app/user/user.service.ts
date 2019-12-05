@@ -85,7 +85,7 @@ export class UserService {
             
                 this.setClientRole()
             }
-        this.router.navigateByUrl('/dispositivos/list');
+        this.router.navigateByUrl('/dispositivos/all');
     }
 
     /**

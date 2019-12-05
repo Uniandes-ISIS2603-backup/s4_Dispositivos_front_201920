@@ -80,9 +80,10 @@
             </div>
 
             <label for="dispositivoTipo"><b>Ingrese el tipo del dispositivo</b></label>
-            <input type="text" name="dispositivoTipo" class="form-control" id="dispositivoTipo"
-              [(ngModel)]="dispositivo.tipo" #dispositivoTipo="ngModel"
-              [ngClass]="{ 'is-invalid': f3.submitted && dispositivoTipo.invalid }" required>
+            <select class="form-control" name="dispositivoTipo" id="dispositivoTipo" [(ngModel)]="dispositivo.tipo" required #dispositivoTipo="ngModel"
+            [ngClass]="{ 'is-invalid': f3.submitted && dispositivoTipo.invalid }">
+                <option [value]="rr" *ngFor="let rr of tipos">{{rr}}</option>
+            </select>
             <div class="invalid-feedback">
               <div>Hace falta el tipo del dispositivo</div>
             </div>
@@ -104,13 +105,14 @@
             </div>
 
             <label for="dispositivoEstado"><b>Ingrese el estado del dispositivo</b></label>
-            <input type="text" name="dispositivoEstado" class="form-control" id="dispositivoEstado"
-              [(ngModel)]="dispositivo.estado" #dispositivoEstado="ngModel"
-              [ngClass]="{ 'is-invalid': f3.submitted && dispositivoEstado.invalid }" required>
+            <select class="form-control" name="dispositivoEstado" id="dispositivoEstado" [(ngModel)]="dispositivo.estado" required #dispositivoEstado="ngModel"
+            [ngClass]="{ 'is-invalid': f3.submitted && dispositivoEstado.invalid }">
+                <option [value]="stat" *ngFor="let stat of estado">{{stat}}</option>
+            </select>
             <div class="invalid-feedback">
               <div>Hace falta el estado del dispositivo</div>
             </div>
-
+            
             <label for="dispositivoPrecio"><b>Ingrese el precio del dispositivo</b></label>
             <input type="text" name="dispositivoPrecio" class="form-control" id="dispositivoPrecio"
               [(ngModel)]="dispositivo.precio" #dispositivoPrecio="ngModel"
