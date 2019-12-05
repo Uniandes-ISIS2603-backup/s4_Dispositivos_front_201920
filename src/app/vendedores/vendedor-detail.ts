@@ -4,7 +4,7 @@ export class VendedorDetail extends Vendedor
 {
   apellido: string;
   
-  celular: number;
+  celular: string;
 
   correoElectronico: string;
 

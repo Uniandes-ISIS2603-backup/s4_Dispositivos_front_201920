@@ -2,7 +2,12 @@ import {Injectable} from '@angular/core';
 import {Router} from '@angular/router';
 import {NgxRolesService, NgxPermissionsService} from 'ngx-permissions'
 import 'rxjs/add/operator/catch';
-
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Cliente } from '../cliente/cliente';
+import { Observable } from 'rxjs';
+const API_URL = environment.apiURL;
+const clientes = '/clientes';
 /**
  * The service provider for everything related to authentication
  */
@@ -15,7 +20,7 @@ export class UserService {
      * @param roleService NgxRolesService to manage authentication roles
      * @param permissionsService NgxPermissionsService to manage authentication permissions
      */
-    constructor (private router: Router, private roleService: NgxRolesService, private permissionsService: NgxPermissionsService) { }
+    constructor (private router: Router, private roleService: NgxRolesService, private permissionsService: NgxPermissionsService,private http: HttpClient) { }
 
     start (): void {
         this.permissionsService.flushPermissions();
@@ -44,6 +49,10 @@ export class UserService {
         this.roleService.addRole('CLIENT', ['leave_review']);
         localStorage.setItem('role', 'CLIENT');
     }
+
+    signUp(cliente): Observable<Cliente> {
+        return this.http.post<Cliente>(API_URL + clientes, cliente);
+    }  
 
     setAdministratorRole (): void {
         this.roleService.flushRoles();
@@ -74,7 +83,7 @@ export class UserService {
          else {
             this.setClientRole()
         }
-        this.router.navigateByUrl('/books/list');
+        this.router.navigateByUrl('/dispositivos/list');
     }
 
     /**
