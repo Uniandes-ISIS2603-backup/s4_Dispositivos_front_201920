@@ -31,7 +31,7 @@ export class UserSignUpComponent implements OnInit {
     * Sign the user up with the selected role
     */
     signUp(): Cliente {
-        this.userService.login('Cliente');
+        this.userService.login('CLIENT');
         this.toastrService.success('Successfully signed up')
         this.userService.signUp(this.user).subscribe((user) => {
             this.user = user;

@@ -4,24 +4,23 @@ import { DispositivoListComponent } from './dispositivo-list/dispositivo-list.co
 import { DispositivoDetailComponent } from './dispositivo-detail/dispositivo-detail.component';
 import { DispositivoCreateComponent } from './dispositivo-create/dispositivo-create.component';
 import { DispositivoEditComponent } from './dispositivo-edit/dispositivo-edit.component';
-import { DispositivoAddReviewComponent } from './dispositivo-add-review/dispositivo-add-review.component';
+import { DispositivoAddCalificacionComponent } from './dispositivo-add-review/dispositivo-add-review.component';
 import { HomeComponent } from './home/home.component';
 import {CarouselModule} from 'primeng/carousel';
 import { DispositivoService } from './dispositivo.service';
-import {OwlModule} from 'ngx-owl-carousel'; 
-
-
-
+import {OwlModule} from 'ngx-owl-carousel';
+import { FormsModule }   from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule, 
     CarouselModule, 
-    OwlModule
+    OwlModule,
+    FormsModule
   ],
   declarations: [DispositivoListComponent, DispositivoDetailComponent, 
-    DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddReviewComponent, HomeComponent], 
-    exports: [DispositivoListComponent, DispositivoEditComponent],
+    DispositivoCreateComponent, DispositivoEditComponent, DispositivoAddCalificacionComponent, HomeComponent], 
+    exports: [DispositivoListComponent, DispositivoEditComponent,CarouselModule,HomeComponent],
     providers: [DispositivoService]
 })
 export class DispositivoModule { }
