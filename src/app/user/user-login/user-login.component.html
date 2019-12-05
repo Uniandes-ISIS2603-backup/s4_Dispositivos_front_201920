@@ -10,7 +10,8 @@
             </div>
             <div class="form-group">
                 <label for="password"><b>Contraseña</b></label>
-                <input type="text" name="password" class="form-control" id="password" [(ngModel)]="user.password" required>
+                <input type="text" name="password" class="form-control" id="password" [(ngModel)]="user.password"
+                    required>
             </div>
             <div class="form-group">
                 <label for="role"><b>Rol en el sistema</b></label>
@@ -18,8 +19,16 @@
                     <option [value]="role" *ngFor="let role of roles">{{role}}</option>
                 </select>
             </div>
-            <div class="justify-content-center align-self-center">
+
+            <div class="row form-inline justify-content-center align-self-center">
                 <button type="submit" class="btn btn-primary">Ingresar</button>
+                <div> </div>
+                <button class="btn btn-social-icon btn-google" (click)="signInWithGoogle() "(click)="loginA()"><span
+                        class="fa fa-google"></span></button>
+                <button class="btn btn-social-icon btn-facebook" (click)="signInWithFB()"(click)="loginA()"><span
+                        class="fa fa-facebook"></span></button>
+                <button class="btn btn-social-icon btn-linkedin" (click)="signInWithLinkedIn()"(click)="loginA()"><span
+                        class="fa fa-linkedin"></span></button>
             </div>
         </form>
     </div>
