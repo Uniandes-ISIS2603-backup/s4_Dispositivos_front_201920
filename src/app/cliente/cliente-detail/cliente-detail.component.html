@@ -35,16 +35,16 @@
         <th scope="col">Total pago (COP)</th>
         <th scope="col">Impuestos (%)</th>
         <th scope="col">Número de tarjeta</th>
-        <th scope="col">Fecha de pago</th>
+        <th scope="col">Fecha de factura</th>
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let comprobante of clienteDetail.comprobantes">
+      <tr *ngFor="let comprobante of clienteDetail.comprobantesRecibidos">
         <td>{{comprobante.numeroDeFactura}}</td>
-        <td>{{comprobante.totalPago}}</td>
+        <td>{{comprobante.totalDePago}}</td>
         <td>{{comprobante.impuestos}}</td>
-        <td>{{comprobante.numeroTarjeta}}</td>
-        <td>{{comprobante.fechaDePago}}</td>
+        <td>{{comprobante.numeroDeTarjeta}}</td>
+        <td>{{comprobante.fechaDeFactura}}</td>
       </tr>
     </tbody>
   </table>

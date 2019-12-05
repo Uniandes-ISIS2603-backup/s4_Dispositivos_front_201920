@@ -7,7 +7,7 @@ export class Comprobante {
     /**
      * Total a pagar.
      */
-    totalPago: number;
+    totalDePago: number;
 
     /**
     * Porcentaje de impuestos sobre la compra.
@@ -17,10 +17,10 @@ export class Comprobante {
     /**
     * Fecha de pago de los dispositivos.
     */
-    fechaDePago: string;
+   fechaDeFactura: string;
 
     /**
      * Número de tarjeta con la cual se realizó el pago.
      */
-    numeroTarjeta: number;
+    numeroDeTarjeta: number;
 }

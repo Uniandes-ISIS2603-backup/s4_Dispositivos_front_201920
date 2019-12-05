@@ -10,6 +10,6 @@ facturas: Factura[];
     /**
      * Atributo que modela los comprobantes de pago.
      */
-comprobantes: Comprobante[];
+comprobantesRecibidos: Comprobante[];
   
 }
