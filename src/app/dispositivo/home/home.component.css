@@ -1,70 +1,81 @@
-.bg-primary{
+.bg-primary {
     background-color: rgba(211, 211, 211, 0.4) !important;
-}
-
-.footer{
+  }
+  
+  .btn-drop {
+    color: black !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    text-align: left;
+    background-color: #f8f9fa !important;
+    border: none;
+  }
+  
+  .footer {
     background-color: black !important;
     color: white;
-}
-
-.fuente::placeholder {
+  }
+  
+  .fuente::placeholder {
     font-size: 10px;
-}
-
-.carousel-control-next {
+  }
+  
+  .carousel-control-next {
     background-color: rgba(0, 0, 0, 0.3);
     width: 50px;
     height: 100px;
-}
-
-.carousel-control-prev {
+  }
+  
+  .carousel-control-prev {
     background-color: rgba(0, 0, 0, 0.3);
     width: 50px;
     height: 100px;
-}
-
-
-.container{
+  }
+  
+  .container {
     width: 2000px;
-}
-
-.shopping {
+  }
+  
+  .shopping {
     width: 40px;
     height: 40px;
     margin-right: 50px;
-}
-
-.busqueda {
+  }
+  
+  .busqueda {
     width: 700px;
-}
-
-.btn-img {
+  }
+  
+  .btn-img {
     margin-top: 100px;
-}
-
-.img-banner {
+  }
+  
+  .img-banner {
     width: 1920px !important;
     height: 408px !important;
-}
-
-.disp {
+  }
+  
+  .disp {
     width: 400px;
     width: 400px;
-}
-
-.nuevos{
-    font-family: Proxima Nova,-apple-system,Helvetica Neue,Helvetica,Roboto,Arial,sans-serif;
+  }
+  
+  .nuevos {
+    font-family: Proxima Nova, -apple-system, Helvetica Neue, Helvetica, Roboto, Arial, sans-serif;
     font-size: 26px;
     font-weight: 300;
-    margin: 0,0,0,8px;
+    margin: 0, 0, 0, 8px;
     color: #666
-}
-
-#sign-in {
+  }
+  
+  #sign-in {
     margin-right: 100px;
-}
-
-.work{
+  }
+  
+  .work {
     font-family: Palatino, Georgia, 'Times New Roman', Times, serif;
     font-size: 200px;
-}
+  }
