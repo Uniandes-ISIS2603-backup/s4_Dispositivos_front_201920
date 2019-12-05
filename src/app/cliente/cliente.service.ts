@@ -4,6 +4,7 @@ import { Cliente } from "./cliente";
 import { ClienteDetail } from "./cliente-detail";
 import { Observable } from "rxjs";
 import { environment } from '../../environments/environment';
+import { Administrador } from './administrador';
 
 const API_URL = environment.apiURL;
 const clientes = "/clientes";
@@ -20,7 +21,14 @@ export class ClienteService {
   getClienteDetail(clienteId): Observable<ClienteDetail> {
     return this.http.get<ClienteDetail>(API_URL +clientes+'/'+clienteId);
   }
+  getUsuario(clienteUser): Observable<Cliente> {
+    return this.http.get<Cliente>(API_URL +clientes+'/user/'+clienteUser);
+  }
 
+  getAdministrador(idAdmin):Observable<Administrador>
+  {
+    return this.http.get<Administrador>(API_URL +'/administradores/'+idAdmin);
+  }
       /**
     * Creates an author
     * @param author The new author

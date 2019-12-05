@@ -50,7 +50,7 @@ import { NotFoundModule } from './notFound/notFound.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule, 
+        NgbModule.forRoot(), 
         DispositivoModule, 
         CategoriaModule,
         MedioPagoModule, 

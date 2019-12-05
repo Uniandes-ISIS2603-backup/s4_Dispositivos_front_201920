@@ -40,7 +40,7 @@ export class UserLoginComponent implements OnInit {
     */
     ngOnInit() {
         this.user = new User();
-        this.roles = ['Administrator', 'Cliente', 'Vendedor'];
+        this.roles = ['VEND', 'ADMIN', 'CLIENT'];
     }
 
 }

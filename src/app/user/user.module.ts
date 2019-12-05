@@ -8,6 +8,8 @@ import { FormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
+import { Administrador } from '../cliente/administrador';
+import { Cliente } from '../cliente/cliente';
 
 @NgModule({
     imports: [
@@ -19,7 +21,7 @@ import { UserSignUpComponent } from './user-sign-up/user-sign-up.component';
         NgbModule
     ],
     declarations: [UserLoginComponent, UserSignUpComponent],
-    providers: [UserService],
+    providers: [UserService,Administrador,Cliente],
     bootstrap: [UserLoginComponent,UserSignUpComponent],
     exports:[UserLoginComponent,UserSignUpComponent]
 })
