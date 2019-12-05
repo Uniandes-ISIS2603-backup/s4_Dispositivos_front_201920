@@ -119,9 +119,9 @@
               <div>Hace falta el precio del dispositivo</div>
             </div>
 
-            <label for="dispositivoImagenes"><b>Ingrese la imagen del dispositivo</b></label>
+            <label for="dispositivoImagenes"><b>Ingrese las imagenes del dispositivo</b></label>
             <input type="text" name="dispositivoImagenes" class="form-control" id="dispositivoImagenes"
-            [(ngModel)]="dispositivo.imagenes" #dispositivoImagenes="ngModel" 
+              [(ngModel)]="dispositivo.imagenes" #dispositivoImagenes="ngModel"
               [ngClass]="{ 'is-invalid': f3.submitted && dispositivoImagenes.invalid }" required>
             <div class="invalid-feedback">
               <div>Hace falta la imagen del dispositivo</div>
