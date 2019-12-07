@@ -23,6 +23,39 @@ import {UserModule} from './user/user.module';
 
 import {CategoriaModule} from './categoria/categoria.module';
 import {MedioPagoModule} from './medioPago/medio.module';
+import { AdminModule } from './adminview/admin.module';
+import { NotFoundModule } from './notFound/notFound.module';
+
+
+import {
+    SocialLoginModule,
+    AuthServiceConfig,
+    GoogleLoginProvider,
+    FacebookLoginProvider,
+    LinkedinLoginProvider,
+} from "angular-6-social-login";
+ 
+ 
+// Configs 
+export function getAuthServiceConfigs() {
+  let config = new AuthServiceConfig(
+      [
+        {
+          id: FacebookLoginProvider.PROVIDER_ID,
+          provider: new FacebookLoginProvider('528961187921-ld24b25466u4t2lacn9r35asg000lfis.apps.googleusercontent.com')
+        },
+        {
+          id: GoogleLoginProvider.PROVIDER_ID,
+          provider: new GoogleLoginProvider('528961187921-ld24b25466u4t2lacn9r35asg000lfis.apps.googleusercontent.com')
+        },
+          {
+            id: LinkedinLoginProvider.PROVIDER_ID,
+            provider: new LinkedinLoginProvider("1098828800522-m2ig6bieilc3tpqvmlcpdvrpvn86q4ks.apps.googleusercontent.com")
+          },
+      ]
+  );
+  return config;
+}
 
 @NgModule({
     declarations: [
@@ -33,6 +66,7 @@ import {MedioPagoModule} from './medioPago/medio.module';
         BrowserAnimationsModule,
         AppRoutingModule,
         HttpClientModule,
+        SocialLoginModule,
         BrowserAnimationsModule,
         ModalDialogModule.forRoot(),
         ClienteModule,
@@ -48,11 +82,13 @@ import {MedioPagoModule} from './medioPago/medio.module';
         }),
         NgxPaginationModule,
         NgxPermissionsModule.forRoot(),
-        NgbModule, 
+        NgbModule.forRoot(), 
         DispositivoModule, 
         CategoriaModule,
         MedioPagoModule, 
-        OwlModule
+        AdminModule,
+        OwlModule,
+        NotFoundModule
     ],
     bootstrap: [AppComponent],
     providers: [
@@ -60,7 +96,11 @@ import {MedioPagoModule} from './medioPago/medio.module';
             provide: HTTP_INTERCEPTORS,
             useClass: HttpErrorInterceptor,
             multi: true
-        }
+        },
+        {
+            provide: AuthServiceConfig,
+            useFactory: getAuthServiceConfigs
+          }
     ]
 })
 export class AppModule {}

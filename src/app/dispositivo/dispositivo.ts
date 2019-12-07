@@ -22,9 +22,9 @@ export class Dispositivo{
 
     esImportado: Boolean; 
 
-    estado: String; 
+    estado: string; 
 
     precio: Number; 
 
-    imagen: String; 
+    imagenes: string; 
 }

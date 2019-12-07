@@ -1,8 +1,15 @@
-import {Injectable} from '@angular/core';
-import {Router} from '@angular/router';
-import {NgxRolesService, NgxPermissionsService} from 'ngx-permissions'
+import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
+import { NgxRolesService, NgxPermissionsService } from 'ngx-permissions'
 import 'rxjs/add/operator/catch';
-
+import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
+import { Cliente } from '../cliente/cliente';
+import { Observable } from 'rxjs';
+import { ClienteService } from '../cliente/cliente.service';
+import { Administrador } from '../cliente/administrador';
+const API_URL = environment.apiURL;
+const clientes = '/clientes';
 /**
  * The service provider for everything related to authentication
  */
@@ -15,9 +22,9 @@ export class UserService {
      * @param roleService NgxRolesService to manage authentication roles
      * @param permissionsService NgxPermissionsService to manage authentication permissions
      */
-    constructor (private router: Router, private roleService: NgxRolesService, private permissionsService: NgxPermissionsService) { }
+    constructor(private administrador: Administrador, private cliente: Cliente, private clienteService: ClienteService, private router: Router, private roleService: NgxRolesService, private permissionsService: NgxPermissionsService, private http: HttpClient) { }
 
-    start (): void {
+    start(): void {
         this.permissionsService.flushPermissions();
         this.roleService.flushRoles();
         this.permissionsService.loadPermissions(['edit_author_permission', 'delete_author_permission', 'leave_review']);
@@ -29,35 +36,39 @@ export class UserService {
         } else if (role === 'VEND') {
             this.setAdministratorRole();
         }
-         else {
+        else {
             this.setClientRole();
         }
     }
 
-    setGuestRole (): void {
+    setGuestRole(): void {
         this.roleService.flushRoles();
         this.roleService.addRole('GUEST', ['']);
     }
 
-    setClientRole (): void {
+    setClientRole(): void {
         this.roleService.flushRoles();
         this.roleService.addRole('CLIENT', ['leave_review']);
         localStorage.setItem('role', 'CLIENT');
     }
 
-    setAdministratorRole (): void {
+    signUp(cliente): Observable<Cliente> {
+        return this.http.post<Cliente>(API_URL + clientes, cliente);
+    }
+
+    setAdministratorRole(): void {
         this.roleService.flushRoles();
         this.roleService.addRole('ADMIN', ['edit_author_permission', 'delete_author_permission']);
         localStorage.setItem('role', 'ADMIN');
     }
 
-    setVendedorRole (): void {
+    setVendedorRole(): void {
         this.roleService.flushRoles();
         this.roleService.addRole('VEND', ['edit_author_permission', 'delete_author_permission']);
         localStorage.setItem('role', 'VEND');
     }
 
-    printRole (): void {
+    printRole(): void {
         console.log(this.roleService.getRoles());
     }
 
@@ -65,22 +76,22 @@ export class UserService {
      * Logs the user in with the desired role
      * @param role The desired role to set to the user
      */
-    login (role): void {
-        if (role === 'Administrator') {
-            this.setAdministratorRole();
-        } else if (role === 'Vendedor') {
-            this.setVendedorRole();
-        }
-         else {
-            this.setClientRole()
-        }
-        this.router.navigateByUrl('/books/list');
+    login(role): void {
+        if (role === 'ADMIN') {
+            
+                this.setAdministratorRole();
+            }
+        else if (role === 'CLIENT') {
+            
+                this.setClientRole()
+            }
+        this.router.navigateByUrl('/dispositivos/all');
     }
 
     /**
      * Logs the user out
      */
-    logout (): void {
+    logout(): void {
         this.roleService.flushRoles();
         this.setGuestRole();
         localStorage.removeItem('role');

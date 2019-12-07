@@ -17,7 +17,12 @@ import { MedioPagoListComponent } from '../medioPago/medio-list/medio-list.compo
 import { MedioPagoCreateComponent } from '../medioPago/medio-create/medio-create.component';
 import { VendedoresListComponent } from '../vendedores/vendedores-list/vendedores-list.component';
 import { VendedoresDetailComponent } from '../vendedores/vendedores-detail/vendedores-detail.component';
+<<<<<<< HEAD
 import { VendedoresCreateComponent } from '../vendedores/vendedores-create/vendedores-create.component';
+=======
+import { AdminViewComponent } from '../adminview/admin-view/admin-view.component';
+import { NotFoundComponent } from '../notFound/notFound/notfound.component';
+>>>>>>> 02c2b63f7e333c68c2b2d9724cb8311b9fb6172a
 
 const routes: Routes = [
 
@@ -109,7 +114,11 @@ const routes: Routes = [
             }
         ]
     },
-    
+    {
+        path: 'administrador',
+        component: AdminViewComponent,
+        children: []
+    },
     {
         path: 'vendedores',
         children:
@@ -128,7 +137,9 @@ const routes: Routes = [
             outlet: 'detail'
           }
         ]
-      }
+      },
+      {path: '', redirectTo: 'home',pathMatch: 'full'},
+      { path: '**', component: NotFoundComponent }
 ];
 
 @NgModule({

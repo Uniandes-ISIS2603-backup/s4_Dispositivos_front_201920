@@ -4,9 +4,12 @@ import { Observable } from "rxjs";
 import { Dispositivo } from "./dispositivo";
 import { DispositivoDetail } from "./dispositivo-detail";
 import { HttpClient } from "@angular/common/http";
+import { Calificacion } from './calificacion';
 
 const API_URL = environment.apiURL;
 const dispositivos = "/dispositivos";
+const calificaciones = "/calificaciones";
+
 
 @Injectable()
 export class DispositivoService {
@@ -23,5 +26,9 @@ export class DispositivoService {
 
     createDispositivo(dispositivo): Observable<Dispositivo> {
         return this.http.post<Dispositivo>(API_URL + dispositivos, dispositivo);
+    }
+
+    createCalificacion(dispositivoId, calificacion): Observable<Calificacion> {
+        return this.http.post<Calificacion>(API_URL + dispositivos + '/' + dispositivoId + calificaciones, calificacion);
     }
 }

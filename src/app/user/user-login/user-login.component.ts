@@ -5,6 +5,7 @@ import { UserService } from '../user.service';
 import { User } from '../user';
 
 import { ToastrService } from 'ngx-toastr';
+import { FacebookLoginProvider, GoogleLoginProvider, LinkedinLoginProvider, AuthService } from 'angular-6-social-login';
 
 @Component({
     selector: 'app-user-login',
@@ -20,12 +21,39 @@ export class UserLoginComponent implements OnInit {
     */
     constructor(
         private userService: UserService,
+        private socialAuthService: AuthService,
         private toastrService: ToastrService,
     ) { }
 
     user: User;
 
     roles: String[];
+    signInWithGoogle(): void {
+       var win= window.open("https://accounts.google.com/ServiceLogin/identifier?passive=1209600&continue=https%3A%2F%2Faccounts.google.com%2F&followup=https%3A%2F%2Faccounts.google.com%2F&flowName=GlifWebSignIn&flowEntry=AddSession");
+       var timer = setInterval(function() {
+           if(win.closed) {
+       this.userService.login('CLIENT');
+       clearInterval(timer);
+        this.toastrService.success('Logged in')}},100);
+    }
+
+    signInWithFB(): void {
+        var win= window.open("https://www.facebook.com/login");
+        var timer = setInterval(function() {
+            if(win.closed) {
+        this.userService.login('CLIENT');
+        clearInterval(timer);
+         this.toastrService.success('Logged in')}},100);
+    }
+
+    signInWithLinkedIn(): void {
+        var win= window.open("https://www.linkedin.com/login");
+       var timer = setInterval(function() {
+           if(win.closed) {
+       this.userService.login('CLIENT');
+       clearInterval(timer);
+        this.toastrService.success('Logged in')}},100);
+    }
 
     /**
     * Logs the user in with the selected role
@@ -35,12 +63,17 @@ export class UserLoginComponent implements OnInit {
         this.toastrService.success('Logged in')
     }
 
+    loginA(): void {
+        this.userService.login('CLIENT');
+        this.toastrService.success('Logged in')
+    }
+
     /**
     * This function will initialize the component
     */
     ngOnInit() {
         this.user = new User();
-        this.roles = ['Administrator', 'Cliente', 'Vendedor'];
+        this.roles = ['VEND', 'ADMIN', 'CLIENT'];
     }
 
 }
